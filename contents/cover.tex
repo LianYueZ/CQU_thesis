@@ -1,0 +1,94 @@
+\cqusetup{
+%	************	注意	************
+%	* 1. \cqusetup{}中不能出现全空的行，如果需要全空行请在行首注释
+%	* 2. 不需要的配置信息可以放心地坐视不理、留空、删除或注释（都不会有影响）
+%	*
+%	********************************
+% ===================
+%	论文的中英文题目
+% ===================
+  ctitle = {基于Mamba的高分辨率病理图像分类算法研究},
+  etitle = {Research on High-Resolution Medical Pathology WSI Image Classification Algorithm Based on Mamba},
+% ===================
+% 作者部分的信息
+% \secretize{}为盲审标记点，在打开盲审开关时内容会自动被替换为***输出，盲审开关默认关闭
+% ===================
+  cauthor = \secretize{朱翔},	% 你的姓名，以下每项都以英文逗号结束
+  eauthor = \secretize{Xiang~Zhu},	% 姓名拼音，~代表不会断行的空格
+  studentid = \secretize{},	% 仅本科生，学号
+  csupervisor = \secretize{黄~~~晟~~~~~教授},	% 导师的姓名
+  esupervisor = \secretize{{Prof.~Sheng Huang}},	% 导师的姓名拼音
+  cassistsupervisor = \secretize{}, % 本科生可选，助理指导教师姓名，不用时请留空为{}
+  cextrasupervisor = \secretize{}, % 本科生可选，校外指导教师姓名，不用时请留空为{}
+  eassistsupervisor = \secretize{}, % 本科生可选，助理指导教师或/和校外指导教师姓名拼音，不用时请留空为{}
+  cpsupervisor = \secretize{}, % 仅专硕，兼职导师姓名
+  epsupervisor = \secretize{},	% 仅专硕，兼职导师姓名拼音
+  cclass = \secretize{\rmfamily{2025}\heiti{年}\rmfamily{6}\heiti{月}},	% 博士生和学硕填学科门类，学硕填学科类型
+  research_direction = \zihao{3}{工学},
+  edgree = {},	% 专硕填Professional Degree，其他按实情填写
+% % 提示：如果内容太长，可以用\zihao{}命令控制字号，作用范围：{}内
+  cmajor = 工~~~~学,	% 专硕不需填，填写专业名称
+  emajor = , % % 专硕不需填，填写专业英文名称
+  cmajora = \zihao{3}{软件工程},
+  cmajorb = \zihao{3}{计算机视觉},
+  cmajorc = \secretize{},
+  % cmajord = 2024年6月,
+% ===================
+% 底部的学院名称和日期
+% ===================
+  cdepartment = ,	%学院名称
+  edepartment = ,	%学院英文名称
+% ===================
+% 封面的日期可以自动生成（注释掉时），也可以解除注释手动指定，例如：二〇一六年五月
+% ===================
+%	mycdate = {2023年6月},
+%	myedate = {June 2023},
+}% End of \cqusetup
+% ===================
+%
+% 论文的摘要
+%
+% ===================
+\begin{cabstract}	% 中文摘要
+医学影像分析作为疾病诊断的 “金标准”，是临床医疗的重要支撑。其中，数字病理图像分类作为医学影像分析的核心领域，不仅是构建临床辅助诊断技术体系的关键，更是实现精准医疗的重要技术路径。
+在数字病理图像分类任务中，由于病理图像的高分辨率特性以及微小病灶区域等原因，通常采用多实例学习框架，但大量实例会导致计算成本高、实例关系建模不充分等问题。
+当前研究表明Mamba架构具有极强的长序列建模能力且仅有线性计算复杂度，适合解决上述病理图像分类难题，但其中仍然存在空间建模不充分、与病理图像多实例学习的序列不变性存在冲突等问题。
+为攻克这一挑战，实现Mamba架构在病理图像领域的高效适配，本研究从多扫描Mamba和扫描不变性Mamba两个关键视角展开深入探索。
+
+（1）针对Mamba一维序列建模所造成图像空间结构捕获能力不足的问题，
+本研究提出基于空间信息增强的多扫描Mamba多实例学习框架（M$^2$S-MIL）。
+该框架创新性地设计了多个扫描模式分支作为Mamba的输入，提出了区域螺旋扫描和网格扫描等新型扫描模式，
+显著提升Mamba对局部连续性、旋转不变性及同一序列不同方向空间关联信息的捕获能力。
+同时，通过设计基于分块局部注意力的2D空间上下文感知模块，进一步强化序列对2D空间上下文的感知能力，
+极大提高Mamba对空间关系的捕捉，有力推动Mamba模型与病理图像分类任务的适配进程。
+大量实验表明，综合多种扫描模式分支并引入空间信息，
+能够切实解决Mamba一维实例序列空间建模不充分的问题，显著提高模型性能，同时在数字病理图像分类任务中一定程度缓解了使用Mamba模型出现的建模倾向差异难题。​
+
+（2）针对Mamba作为序列相关模型，与病理图像多实例学习的序列不变性存在冲突的问题，
+本研究提出基于对比学习策略的扫描不变Mamba多实例学习（SMC-MIL）框架。
+通过设计双分支实例序列对比学习框架，来约束同一Mamba从不同扫描序列获得的包表示及分类结果保持一致，以引导Mamba学习与序列顺序无关的特征。
+同时引入基于实例评估的序列对比增强方法，来增加对比学习难度，迫使Mamba在输入序列差异极大的情况下，
+学习到对病理图像形成一致表示和决策的能力，成功赋予Mamba良好的序列不变建模和实例识别能力。
+实验结果显示，SMC-MIL在继承了Mamba优异计算效率和建模能力的同时，有效降低模型对输入序列顺序的敏感性，
+专注于实例无序关系建模，挖掘出更具显著性判别特征的实例，更好地适配病理图像分类任务。
+
+\end{cabstract}
+% 中文关键词，请使用英文逗号分隔：
+\ckeywords{数字病理图像分类；Mamba架构；多实例学习；弱监督学习}
+
+\begin{eabstract}	% 英文摘要
+As the ``gold standard'' of disease diagnosis, medical image analysis is an important support for clinical treatment. Among them, digital pathological image classification, as the core field of medical image analysis, is not only the key to the construction of clinical assisted diagnosis technology system, but also an important technical path to achieve precision medicine.
+In digital pathological image classification tasks, challenges arise from insufficient instance relationship modeling and high computational resource consumption due to the large number of instances. Recent studies demonstrate that the Mamba architecture, characterized by strong long-sequence modeling capabilities and linear computational complexity, is suitable for addressing these issues. However, limitations remain, including inadequate spatial modeling and conflicts with the sequence invariance requirements of multi-instance learning for pathological images.
+To address these challenges and enable efficient adaptation of the Mamba architecture in pathological image analysis, this study explores two key perspectives: multi-scan Mamba and scan-invariant Mamba.
+
+(1) To overcome the spatial modeling limitations of Mamba's one-dimensional sequence processing, we propose the Multi-scan Mamba with Spatial Enhancement (M²S-MIL) framework. This framework introduces innovative scanning modes (e.g., regional spiral scanning and grid scanning) as inputs to Mamba, enhancing its ability to capture local continuity, rotation invariance, and spatial correlations across different directions. Additionally, a 2D spatial context sensing module based on block-local attention is designed to reinforce 2D spatial relationship perception. This approach significantly improves Mamba's spatial modeling capabilities, effectively bridging the gap between Mamba's architecture and pathological image classification tasks. Extensive experiments validate that integrating multi-scan branches and spatial information alleviates Mamba's one-dimensional spatial limitations, enhances model performance, and mitigates discrepancies in modeling trends for digital pathological image classification.
+
+(2) To resolve conflicts between Mamba's sequence-dependent processing and the sequence invariance requirements of multi-instance learning, we develop the Scan-invariant Mamba via Contrast Learning (SMC-MIL) framework. This framework employs a two-branch instance sequence contrast learning mechanism to constrain consistent bag representations and classification results across different scan sequences, guiding Mamba to learn order-agnostic features. A sequence contrast enhancement method based on instance evaluation is introduced to increase learning difficulty, forcing Mamba to develop consistent representations and decisions even for highly variant input sequences. Experimental results show that SMC-MIL maintains Mamba's computational efficiency while reducing its sensitivity to input sequence order. By focusing on instance disorder relationship modeling and discriminative feature mining, SMC-MIL better aligns with the requirements of pathological image classification tasks.
+This study systematically addresses the limitations of Mamba in pathological image analysis through architectural innovations, providing a robust foundation for future advancements in medical image-assisted diagnosis.
+
+\end{eabstract}
+% 英文关键词，请使用英文逗号分隔，关键词内可以空格：
+\ekeywords{Whole Slide Image Classification, Mamba Architecture, Multiple Instance Learning, Weakly Supervised Learning
+}
+
+% 封面和摘要配置完成

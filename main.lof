@@ -1,0 +1,36 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Camelyon16数据集中肿瘤区域相对于正常区域的比例示例图}}{1}{figure.caption.5}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces 两种多实例学习范式示意图}}{2}{figure.caption.6}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Mamba模型与MIL任务差异图}}{5}{figure.caption.7}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces 本文的主要研究内容图}}{7}{figure.caption.8}%
+\addvspace {10\p@ }
+\vspace {-10pt}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Mamba架构示意图}}{11}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces 对比学习结构示意图}}{12}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces 数字病理图像的预处理过程示意图}}{16}{figure.caption.13}%
+\addvspace {10\p@ }
+\vspace {-10pt}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces 常规扫描、网格扫描和区域螺旋扫描示意图}}{17}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces 基于多扫描Mamba的多实例学习架构示意图}}{19}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces 不同Mamba模型的性能比对柱状图}}{30}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces 不同区域数量的模型性能折线图}}{31}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces 原始Mamba(baseline)和M$^2$S-MILL聚合特征t-SNE可视化结果}}{33}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces 多个Mamba变体和M$^2$S-MIL关注的图块可视化结果}}{34}{figure.caption.26}%
+\addvspace {10\p@ }
+\vspace {-10pt}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces SMC-MIL模型总览图}}{38}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces SMC-MIL模型推理流程示意图}}{42}{figure.caption.28}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces 不同Mamba变体的扫描不变性评估的双样本t检验}}{50}{figure.caption.32}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces 不同Mamba模型性能比对柱状图}}{51}{figure.caption.33}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces 不同序列增强率$\alpha \%$下的模型性能折线图}}{53}{figure.caption.36}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces 不同序列掩码率$\beta \%$下的模型性能折线图}}{53}{figure.caption.37}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces 与SOTA方法性能比较的Bootstrap检验}}{54}{figure.caption.38}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces 原始Mamba(baseline)和SMC-MIL关注的图块可视化结果}}{56}{figure.caption.43}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces 原始Mamba(baseline)和SMC-MIL聚合特征t-SNE可视化结果}}{57}{figure.caption.44}%
+\addvspace {10\p@ }
+\vspace {-10pt}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsfinish 

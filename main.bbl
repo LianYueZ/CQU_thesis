@@ -1,0 +1,419 @@
+\begin{thebibliography}{74}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\else
+  \urlstyle{same}\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \DeclareUrlCommand\doi{\urlstyle{rm}}
+  \def\eprint#1#2{#2}
+\else
+  \def\doi#1{\href{https://doi.org/#1}{\nolinkurl{#1}}}
+  \let\eprint\href
+\fi
+
+\bibitem[中共中央、国务院(2016)]{HealthyChina2030}
+中共中央、国务院.
+\newblock “健康中国2030”规划纲要\allowbreak[R].
+\newblock 北京, 2016.
+
+\bibitem[Pinckaers et~al.(2020)Pinckaers, Van~Ginneken, and Litjens]{pinckaers2020streaming}
+Pinckaers H, Van~Ginneken B, Litjens G.
+\newblock Streaming convolutional neural networks for end-to-end learning with multi-megapixel images\allowbreak[J].
+\newblock IEEE Transactions on Pattern Analysis and Machine Intelligence, 2020, 44\allowbreak (3): 1581-1590.
+
+\bibitem[Lu et~al.(2021)Lu, Chen, Williamson, Zhao, Shady, Lipkova, and Mahmood]{lu2021ai}
+Lu M~Y, Chen T~Y, Williamson D~F, et~al.
+\newblock Ai-based pathology predicts origins for cancers of unknown primary\allowbreak[J].
+\newblock Nature, 2021, 594\allowbreak (7861): 106-110.
+
+\bibitem[侯乃侨\ 等(2024)侯乃侨, 翟炜, and 郑军华]{侯乃侨2024显微知著}
+侯乃侨, 翟炜, 郑军华.
+\newblock 显微知著：人工智能在肾癌数字病理中的应用现状及挑战\allowbreak[J].
+\newblock 中国癌症防治杂志, 2024, 16\allowbreak (2): 143-151.
+
+\bibitem[国务院(2017)]{NewGenAIDevPlan}
+国务院.
+\newblock 新一代人工智能发展规划\allowbreak[R].
+\newblock 北京, 2017.
+
+\bibitem[唐仲平\ 等(2018)唐仲平, 崔权哲, 杨李波, 包骥, and 赵春]{唐仲平2018全切片图像扫描技术在临床病理诊断工作中的应用}
+唐仲平, 崔权哲, 杨李波, 等.
+\newblock 全切片图像扫描技术在临床病理诊断工作中的应用\allowbreak[J].
+\newblock 河北医科大学学报, 2018, 39\allowbreak (10): 5.
+
+\bibitem[Dietterich et~al.(1997)Dietterich, Lathrop, and Lozano-P{\'e}rez]{dietterich1997solving}
+Dietterich T~G, Lathrop R~H, Lozano-P{\'e}rez T.
+\newblock Solving the multiple instance problem with axis-parallel rectangles\allowbreak[J].
+\newblock Artificial intelligence, 1997, 89\allowbreak (1-2): 31-71.
+
+\bibitem[Herrera et~al.(2016)Herrera, Ventura, Bello, Cornelis, Zafra, S{\'a}nchez-Tarrag{\'o}, Vluymans, Herrera, Ventura, Bello, et~al.]{herrera2016multiple}
+Herrera F, Ventura S, Bello R, et~al.
+\newblock Multiple instance learning\allowbreak[M].
+\newblock Springer, 2016.
+
+\bibitem[Li et~al.(2021)Li, Li, and Eliceiri]{li2021dual}
+Li B, Li Y, Eliceiri K~W.
+\newblock Dual-stream multiple instance learning network for whole slide image classification with self-supervised contrastive learning\allowbreak[C]//\allowbreak
+Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition.
+\newblock 2021: 14318-14328.
+
+\bibitem[Lu et~al.(2021)Lu, Williamson, Chen, Chen, Barbieri, and Mahmood]{lu2021data}
+Lu M~Y, Williamson D~F, Chen T~Y, et~al.
+\newblock Data-efficient and weakly supervised computational pathology on whole-slide images\allowbreak[J].
+\newblock Nature Biomedical Engineering, 2021, 5\allowbreak (6): 555-570.
+
+\bibitem[Shao et~al.(2021)Shao, Bian, Chen, Wang, Zhang, Ji, et~al.]{shao2021transmil}
+Shao Z, Bian H, Chen Y, et~al.
+\newblock Transmil: Transformer based correlated multiple instance learning for whole slide image classification\allowbreak[C]//\allowbreak
+Proceedings of the Advances in Neural Information Processing Systems.
+\newblock 2021: 2136-2147.
+
+\bibitem[Zhang et~al.(2022)Zhang, Meng, Zhao, Qiao, Yang, Coupland, and Zheng]{zhang2022dtfd}
+Zhang H, Meng Y, Zhao Y, et~al.
+\newblock Dtfd-mil: Double-tier feature distillation multiple instance learning for histopathology whole slide image classification\allowbreak[C]//\allowbreak
+Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition.
+\newblock 2022: 18802-18812.
+
+\bibitem[Tang et~al.(2024)Tang, Zhou, Huang, Zhu, Zhang, and Liu]{tang2024feature}
+Tang W, Zhou F, Huang S, et~al.
+\newblock Feature re-embedding: Towards foundation model-level performance in computational pathology\allowbreak[C]//\allowbreak
+Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition.
+\newblock 2024: 11343-11352.
+
+\bibitem[Dosovitskiy et~al.(2020)Dosovitskiy, Beyer, Kolesnikov, Weissenborn, Zhai, Unterthiner, Dehghani, Minderer, Heigold, Gelly, et~al.]{dosovitskiy2020image}
+Dosovitskiy A, Beyer L, Kolesnikov A, et~al.
+\newblock An image is worth 16x16 words: Transformers for image recognition at scale\allowbreak[A].
+\newblock 2020.
+
+\bibitem[Hamilton(1994)]{hamilton1994state}
+Hamilton J~D.
+\newblock State-space models\allowbreak[J].
+\newblock Handbook of econometrics, 1994, 4\allowbreak (1): 3039-3080.
+
+\bibitem[Gu et~al.(2023)Gu and Dao]{gu2023mamba}
+Gu A, Dao T.
+\newblock Mamba: Linear-time sequence modeling with selective state spaces\allowbreak[A].
+\newblock 2023.
+
+\bibitem[Dao et~al.(2024)Dao and Gu]{mamba2}
+Dao T, Gu A.
+\newblock Transformers are {SSM}s: Generalized models and efficient algorithms through structured state space duality\allowbreak[C]//\allowbreak
+Proceedings of the International Conference on Machine Learning.
+\newblock 2024.
+
+\bibitem[Zhu et~al.(2024)Zhu, Liao, Zhang, Wang, Liu, and Wang]{zhu2024vision}
+Zhu L, Liao B, Zhang Q, et~al.
+\newblock Vision mamba: Efficient visual representation learning with bidirectional state space model\allowbreak[C]//\allowbreak
+Proceedings of the International Conference on Machine Learning.
+\newblock 2024: 62429-62442.
+
+\bibitem[Yue et~al.(2024)Yue and Li]{yue2024medmamba}
+Yue Y, Li Z.
+\newblock Medmamba: Vision mamba for medical image classification\allowbreak[A].
+\newblock 2024.
+
+\bibitem[白玉\ 等(2025)白玉, 吴昊琦, 张丽丽, and 国晗林]{DATE20250218001}
+白玉, 吴昊琦, 张丽丽, 等.
+\newblock SpiralMamba：一种用于高光谱图像分类的轻量级 Mamba 网络\allowbreak[J/OL].
+\newblock 电讯技术, 2025, 15\allowbreak (4): 1-10.
+\newblock DOI: \doi{10.20079/j.issn.1001-893x.241031001}.
+
+\bibitem[Yao et~al.(2024)Yao, Hong, Li, and Chanussot]{yao2024spectralmamba}
+Yao J, Hong D, Li C, et~al.
+\newblock Spectralmamba: Efficient mamba for hyperspectral image classification\allowbreak[A].
+\newblock 2024.
+
+\bibitem[石洋宇\ 等(2025)石洋宇, 谢承杰, 郑棣文, and 卢树华]{BJHK20241114002}
+石洋宇, 谢承杰, 郑棣文, 等.
+\newblock 基于 Mamba-CNN 的多尺度异常行为检测方法\allowbreak[J/OL].
+\newblock 北京航空航天大学学报, 2025: 1-12.
+\newblock DOI: \doi{10.13700/j.bh.1001-5965.2024.0416}.
+
+\bibitem[胡晓伟\ 等(2024)胡晓伟, 闫奕昕, 王大为, and 张宇辉]{ZGGL202412016}
+胡晓伟, 闫奕昕, 王大为, 等.
+\newblock 基于 YOLOM 算法的路面病害轻量化检测方法\allowbreak[J/OL].
+\newblock 中国公路学报, 2024, 37\allowbreak (12): 381-391.
+\newblock DOI: \doi{10.19721/j.cnki.1001-7372.2024.12.016}.
+
+\bibitem[Chen et~al.(2024)Chen, Ye, Tan, Gong, Wu, Chu, Liu, Yu, and Ye]{chen2024mim}
+Chen T, Ye Z, Tan Z, et~al.
+\newblock Mim-istd: Mamba-in-mamba for efficient infrared small target detection\allowbreak[J].
+\newblock IEEE Transactions on Geoscience and Remote Sensing, 2024, 6\allowbreak (1): 361-387.
+
+\bibitem[Zhang et~al.(2025)Zhang, Chen, Liu, Chen, Zou, and Shi]{zhang2025cdmamba}
+Zhang H, Chen K, Liu C, et~al.
+\newblock Cdmamba: Incorporating local clues into mamba for remote sensing image binary change detection\allowbreak[J].
+\newblock IEEE Transactions on Geoscience and Remote Sensing, 2025, 5\allowbreak (4): 361-387.
+
+\bibitem[彭圆圆\ 等(2024)彭圆圆, 黎浩洋, 李文, and 张跃进]{GXXB20250212011}
+彭圆圆, 黎浩洋, 李文, 等.
+\newblock LTDA-Mamba：基于 CNN-Mamba 混合网络的视网膜血管分割算法\allowbreak[J].
+\newblock 光学学报, 2024, 4\allowbreak (2): 325-338.
+
+\bibitem[崔丽群\ 等()崔丽群, 郝思雅, and 栾五洋]{JSGG20240822004}
+崔丽群, 郝思雅, 栾五洋.
+\newblock 基于 Mamba 的轻量级三维点云实例分割算法\allowbreak[J].
+\newblock 计算机工程与应用: 1-10.
+
+\bibitem[Li et~al.(2025)Li, Huang, Wang, and Liu]{li2025selective}
+Li G, Huang Q, Wang W, et~al.
+\newblock Selective and multi-scale fusion mamba for medical image segmentation\allowbreak[J].
+\newblock Expert Systems with Applications, 2025, 261\allowbreak (2): 125518.
+
+\bibitem[Wu et~al.(2025)Wu, Liu, Liang, and Chang]{wu2025h}
+Wu R, Liu Y, Liang P, et~al.
+\newblock H-vmunet: High-order vision mamba unet for medical image segmentation\allowbreak[J].
+\newblock Neurocomputing, 2025: 129447.
+
+\bibitem[Huang et~al.(2024)Huang, Pei, You, Wang, Qian, and Xu]{huang2024localmamba}
+Huang T, Pei X, You S, et~al.
+\newblock Localmamba: Visual state space model with windowed selective scan\allowbreak[A].
+\newblock 2024.
+
+\bibitem[Hoffman et~al.(2015)Hoffman, Pathak, Darrell, and Saenko]{hoffman2015detector}
+Hoffman J, Pathak D, Darrell T, et~al.
+\newblock Detector discovery in the wild: Joint multiple instance and representation learning\allowbreak[C]//\allowbreak
+Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition.
+\newblock 2015: 2883-2891.
+
+\bibitem[Wu et~al.(2015)Wu, Yu, Huang, and Yu]{wu2015deep}
+Wu J, Yu Y, Huang C, et~al.
+\newblock Deep multiple instance learning for image classification and auto-annotation\allowbreak[C]//\allowbreak
+Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition.
+\newblock 2015: 3460-3469.
+
+\bibitem[陈钰(2016)]{陈钰2016基于}
+陈钰.
+\newblock 基于 ELDA 集成的多实例目标检测模型\allowbreak[D].
+\newblock 上海交通大学, 2016.
+
+\bibitem[Tang et~al.(2018)Tang, Wang, Wang, Yan, Liu, Huang, and Yuille]{tang2018weakly}
+Tang P, Wang X, Wang A, et~al.
+\newblock Weakly supervised region proposal network and object detection\allowbreak[C]//\allowbreak
+Proceedings of the European Conference on Computer Vision.
+\newblock 2018: 352-368.
+
+\bibitem[Xu et~al.(2019)Xu, Song, Sun, Ku, Yang, Liu, Wang, Ma, and Xu]{xu2019camel}
+Xu G, Song Z, Sun Z, et~al.
+\newblock Camel: A weakly supervised learning framework for histopathology image segmentation\allowbreak[C]//\allowbreak
+Proceedings of the IEEE/CVF International Conference on Computer Vision.
+\newblock 2019: 10682-10691.
+
+\bibitem[唐大伟\ 等(2014)唐大伟, 鲁东明, 许端清, and 杨冰]{唐大伟2014壁画图像分类中的分组多实例学习方法}
+唐大伟, 鲁东明, 许端清, 等.
+\newblock 壁画图像分类中的分组多实例学习方法\allowbreak[J].
+\newblock 中国图象图形学报, 2014, 19\allowbreak (5): 708-715.
+
+\bibitem[Huang et~al.(2021)Huang, Huang, Huangfu, and Yang]{huang2021weakly}
+Huang G, Huang S, Huangfu L, et~al.
+\newblock Weakly supervised patch label inference network with image pyramid for pavement diseases recognition in the wild\allowbreak[C]//\allowbreak
+Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing.
+\newblock 2021: 7978-7982.
+
+\bibitem[Wang et~al.(2013)Wang, Wang, Bai, Liu, and Tu]{wang2013max}
+Wang X, Wang B, Bai X, et~al.
+\newblock Max-margin multiple-instance dictionary learning\allowbreak[C]//\allowbreak
+Proceedings of the International Conference on Machine Learning.
+\newblock 2013: 846-854.
+
+\bibitem[Chen et~al.(2006)Chen, Bi, and Wang]{chen2006miles}
+Chen Y, Bi J, Wang J~Z.
+\newblock Miles: Multiple-instance learning via embedded instance selection\allowbreak[J].
+\newblock IEEE Transactions on Pattern Analysis and Machine Intelligence, 2006, 28\allowbreak (12): 1931-1947.
+
+\bibitem[Rahmani et~al.(2006)Rahmani and Goldman]{rahmani2006missl}
+Rahmani R, Goldman S~A.
+\newblock Missl: Multiple-instance semi-supervised learning\allowbreak[C]//\allowbreak
+Proceedings of the International Conference on Machine Learning.
+\newblock 2006: 705-712.
+
+\bibitem[Andrews et~al.(2002)Andrews, Tsochantaridis, and Hofmann]{andrews2002support}
+Andrews S, Tsochantaridis I, Hofmann T.
+\newblock Support vector machines for multiple-instance learning\allowbreak[C]//\allowbreak
+Proceedings of the Advances in Neural Information Processing Systems.
+\newblock 2002: 458 -469.
+
+\bibitem[Zhou et~al.(2009)Zhou, Sun, and Li]{zhou2009multi}
+Zhou Z~H, Sun Y~Y, Li Y~F.
+\newblock Multi-instance learning by treating instances as non-iid samples\allowbreak[C]//\allowbreak
+Proceedings of the International Conference on Machine Learning.
+\newblock 2009: 1249-1256.
+
+\bibitem[Ilse et~al.(2018)Ilse, Tomczak, and Welling]{ilse2018attention}
+Ilse M, Tomczak J, Welling M.
+\newblock Attention-based deep multiple instance learning\allowbreak[C]//\allowbreak
+Proceedings of the International Conference on Machine Learning.
+\newblock 2018: 2127-2136.
+
+\bibitem[Kanavati et~al.(2020)Kanavati, Toyokawa, Momosaki, Rambeau, Kozuma, Shoji, Yamazaki, Takeo, Iizuka, and Tsuneki]{kanavati2020weakly}
+Kanavati F, Toyokawa G, Momosaki S, et~al.
+\newblock Weakly-supervised learning for lung carcinoma classification using deep learning\allowbreak[J].
+\newblock Scientific Reports, 2020, 10\allowbreak (1): 9297.
+
+\bibitem[Chikontwe et~al.(2020)Chikontwe, Kim, Nam, Go, and Park]{chikontwe2020multiple}
+Chikontwe P, Kim M, Nam S~J, et~al.
+\newblock Multiple instance learning with center embeddings for histopathology classification\allowbreak[C]//\allowbreak
+Proceedings of the International Conference on Medical Image Computing and Computer-Assisted Intervention.
+\newblock 2020: 519-528.
+
+\bibitem[Campanella et~al.(2019)Campanella, Hanna, Geneslaw, Miraflor, Werneck Krauss~Silva, Busam, Brogi, Reuter, Klimstra, and Fuchs]{campanella2019clinical}
+Campanella G, Hanna M~G, Geneslaw L, et~al.
+\newblock Clinical-grade computational pathology using weakly supervised deep learning on whole slide images\allowbreak[J].
+\newblock Nature Medicine, 2019, 25\allowbreak (8): 1301-1309.
+
+\bibitem[Zhu et~al.(2024)Zhu, Chen, Qiu, Sotiras, Razi, and Wang]{zhu2024dgr}
+Zhu W, Chen X, Qiu P, et~al.
+\newblock Dgr-mil: Exploring diverse global representation in multiple instance learning for whole slide image classification\allowbreak[C]//\allowbreak
+Proceedings of the European Conference on Computer Vision.
+\newblock 2024: 333-351.
+
+\bibitem[Vaswani et~al.(2017)Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez, Kaiser, and Polosukhin]{vaswani2017attention}
+Vaswani A, Shazeer N, Parmar N, et~al.
+\newblock Attention is all you need\allowbreak[C]//\allowbreak
+Proceedings of the Advances in Neural Information Processing Systems.
+\newblock 2017: 18923 -18935.
+
+\bibitem[Kalman(1960)]{kalman1960new}
+Kalman R~E.
+\newblock A new approach to linear filtering and prediction problems\allowbreak[J].
+\newblock Journal of Basic Engineering, 1960, 82\allowbreak (1): 35-45.
+
+\bibitem[Liu et~al.(2024)Liu, Tian, Zhao, Yu, Xie, Wang, Ye, and Liu]{liu2024vmamba}
+Liu Y, Tian Y, Zhao Y, et~al.
+\newblock Vmamba: Visual state space model\allowbreak[A].
+\newblock 2024.
+
+\bibitem[Fang et~al.(2024)Fang, Wang, Wang, Zhang, Ji, and Zhang]{fang2024mammil}
+Fang Z, Wang Y, Wang Z, et~al.
+\newblock Mammil: Multiple instance learning for whole slide images with state space models\allowbreak[A].
+\newblock 2024.
+
+\bibitem[Yang et~al.(2024)Yang, Wang, and Chen]{yang2024mambamil}
+Yang S, Wang Y, Chen H.
+\newblock Mambamil: Enhancing long sequence modeling with sequence reordering in computational pathology\allowbreak[C]//\allowbreak
+Proceedings of the International Conference on Medical Image Computing and Computer-Assisted Intervention.
+\newblock 2024: 296-306.
+
+\bibitem[Chen et~al.(2020)Chen, Kornblith, Norouzi, and Hinton]{chen2020simple}
+Chen T, Kornblith S, Norouzi M, et~al.
+\newblock A simple framework for contrastive learning of visual representations\allowbreak[C]//\allowbreak
+Proceedings of the International Conference on Machine Learning.
+\newblock 2020: 1597-1607.
+
+\bibitem[He et~al.(2020)He, Fan, Wu, Xie, and Girshick]{he2020momentum}
+He K, Fan H, Wu Y, et~al.
+\newblock Momentum contrast for unsupervised visual representation learning\allowbreak[C]//\allowbreak
+Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition.
+\newblock 2020: 9729-9738.
+
+\bibitem[Chen et~al.(2020)Chen, Fan, Girshick, and He]{chen2020improved}
+Chen X, Fan H, Girshick R, et~al.
+\newblock Improved baselines with momentum contrastive learning\allowbreak[A].
+\newblock 2020.
+
+\bibitem[Chen et~al.(2021)Chen, Hung, Tseng, Chien, and Yang]{chen2021incremental}
+Chen T~S, Hung W~C, Tseng H~Y, et~al.
+\newblock Incremental false negative detection for contrastive learning\allowbreak[C]//\allowbreak
+Proceedings of the International Conference on Machine Learning.
+\newblock 2021: 21271-21284.
+
+\bibitem[Grill et~al.(2020)Grill, Strub, Altch{\'e}, Tallec, Richemond, Buchatskaya, Doersch, Avila~Pires, Guo, Gheshlaghi~Azar, et~al.]{grill2020bootstrap}
+Grill J~B, Strub F, Altch{\'e} F, et~al.
+\newblock Bootstrap your own latent-a new approach to self-supervised learning\allowbreak[C]//\allowbreak
+Proceedings of the Advances in Neural Information Processing Systems.
+\newblock 2020: 21271-21284.
+
+\bibitem[Bejnordi et~al.(2017)Bejnordi, Veta, Van~Diest, Van~Ginneken, Karssemeijer, Litjens, Van Der~Laak, Hermsen, Manson, Balkenhol, et~al.]{bejnordi2017diagnostic}
+Bejnordi B~E, Veta M, Van~Diest P~J, et~al.
+\newblock Diagnostic assessment of deep learning algorithms for detection of lymph node metastases in women with breast cancer\allowbreak[J].
+\newblock JAMA, 2017, 318\allowbreak (22): 2199-2210.
+
+\bibitem[Bandi et~al.(2018)Bandi, Geessink, Manson, Van~Dijk, Balkenhol, Hermsen, Bejnordi, Lee, Paeng, Zhong, et~al.]{bandi2018detection}
+Bandi P, Geessink O, Manson Q, et~al.
+\newblock From detection of individual metastases to classification of lymph node status at the patient level: the camelyon17 challenge\allowbreak[J].
+\newblock IEEE Transactions on Medical Imaging, 2018, 38\allowbreak (2): 550-560.
+
+\bibitem[Tang et~al.(2023)Tang, Huang, Zhang, Zhou, Zhang, and Liu]{tang2023multiple}
+Tang W, Huang S, Zhang X, et~al.
+\newblock Multiple instance learning framework with masked hard instance mining for whole slide image classification\allowbreak[C]//\allowbreak
+Proceedings of the IEEE/CVF International Conference on Computer Vision.
+\newblock 2023: 4078-4087.
+
+\bibitem[Brancati et~al.(2022)Brancati, Anniciello, Pati, Riccio, Scognamiglio, Jaume, De~Pietro, Di~Bonito, Foncubierta, Botti, et~al.]{brancati2022bracs}
+Brancati N, Anniciello A~M, Pati P, et~al.
+\newblock Bracs: A dataset for breast carcinoma subtyping in h{\&}e histology images\allowbreak[J].
+\newblock Database, 2022, 2022: baac093.
+
+\bibitem[Yao et~al.(2020)Yao, Zhu, Jonnagaddala, Hawkins, and Huang]{yao2020whole}
+Yao J, Zhu X, Jonnagaddala J, et~al.
+\newblock Whole slide images based cancer survival prediction using attention guided deep multiple instance learning networks\allowbreak[J].
+\newblock Medical Image Analysis, 2020, 65: 101789.
+
+\bibitem[Chen et~al.(2021)Chen, Lu, Weng, Chen, Williamson, Manz, Shady, and Mahmood]{chen2021multimodal}
+Chen R~J, Lu M~Y, Weng W~H, et~al.
+\newblock Multimodal co-attention transformer for survival prediction in gigapixel whole slide images\allowbreak[C]//\allowbreak
+Proceedings of the IEEE/CVF International Conference on Computer Vision.
+\newblock 2021: 4015-4025.
+
+\bibitem[Zhou et~al.(2023)Zhou and Chen]{zhou2023cross}
+Zhou F, Chen H.
+\newblock Cross-modal translation and alignment for survival analysis\allowbreak[C]//\allowbreak
+Proceedings of the IEEE/CVF International Conference on Computer Vision.
+\newblock 2023: 21485-21494.
+
+\bibitem[Wulczyn et~al.(2020)Wulczyn, Steiner, Xu, Sadhwani, Wang, Flament-Auvigne, Mermel, Chen, Liu, and Stumpe]{wulczyn2020deep}
+Wulczyn E, Steiner D~F, Xu Z, et~al.
+\newblock Deep learning-based survival prediction for multiple cancer types using histopathology images\allowbreak[J].
+\newblock PLOS ONE, 2020, 15\allowbreak (6): e0233678.
+
+\bibitem[Zhu et~al.(2017)Zhu, Yao, Zhu, and Huang]{zhu2017wsisa}
+Zhu X, Yao J, Zhu F, et~al.
+\newblock Wsisa: Making survival prediction from whole slide histopathological images\allowbreak[C]//\allowbreak
+Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition.
+\newblock 2017: 7234-7242.
+
+\bibitem[Harrell~Jr et~al.(1996)Harrell~Jr, Lee, and Mark]{harrell1996multivariable}
+Harrell~Jr F~E, Lee K~L, Mark D~B.
+\newblock Multivariable prognostic models: issues in developing models, evaluating assumptions and adequacy, and measuring and reducing errors\allowbreak[J].
+\newblock Statistics in Medicine, 1996, 15\allowbreak (4): 361-387.
+
+\bibitem[He et~al.(2016)He, Zhang, Ren, and Sun]{he2016deep}
+He K, Zhang X, Ren S, et~al.
+\newblock Deep residual learning for image recognition\allowbreak[C]//\allowbreak
+Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition.
+\newblock 2016: 770-778.
+
+\bibitem[Chen et~al.(2024)Chen, Ding, Lu, Williamson, Jaume, Song, Chen, Zhang, Shao, Shaban, et~al.]{chen2024towards}
+Chen R~J, Ding T, Lu M~Y, et~al.
+\newblock Towards a general-purpose foundation model for computational pathology\allowbreak[J].
+\newblock Nature Medicine, 2024, 30\allowbreak (3): 850-862.
+
+\bibitem[Royer-Carfagni(2001)]{ROYERCARFAGNI2001253}
+Royer-Carfagni G.
+\newblock Can a moment-curvature relationship describe the flexion of softening beams?\allowbreak[J/OL].
+\newblock European Journal of Mechanics - A/Solids, 2001, 20\allowbreak (2): 253-276.
+\newblock DOI: \doi{https://doi.org/10.1016/S0997-7538(00)01128-1}.
+
+\bibitem[Deng et~al.(2009)Deng, Dong, Socher, Li, Li, and Fei-Fei]{deng2009imagenet}
+Deng J, Dong W, Socher R, et~al.
+\newblock Imagenet: A large-scale hierarchical image database\allowbreak[J].
+\newblock IEEE Transactions on Pattern Analysis and Machine Intelligence, 2009, 31\allowbreak (4): 699-711.
+
+\bibitem[Lin et~al.(2023)Lin, Yu, Hu, Xu, and Chen]{lin2023interventional}
+Lin T, Yu Z, Hu H, et~al.
+\newblock Interventional bag multi-instance learning on whole-slide pathological images\allowbreak[C]//\allowbreak
+Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition.
+\newblock 2023: 19830-19839.
+
+\bibitem[Li et~al.(2024)Li, Chen, Chu, Sun, Guan, Han, and He]{li2024dynamic}
+Li J, Chen Y, Chu H, et~al.
+\newblock Dynamic graph representation with knowledge-aware attention for histopathology whole slide image analysis\allowbreak[C]//\allowbreak
+Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition.
+\newblock 2024: 11323-11332.
+
+\bibitem[Huang et~al.(2023)Huang, Bianchi, Yuksekgonul, Montine, and Zou]{huang2023visual}
+Huang Z, Bianchi F, Yuksekgonul M, et~al.
+\newblock A visual--language foundation model for pathology image analysis using medical twitter\allowbreak[J].
+\newblock Nature Medicine, 2023, 29\allowbreak (9): 2307-2316.
+
+\end{thebibliography}
