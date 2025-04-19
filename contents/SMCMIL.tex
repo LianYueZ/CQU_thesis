@@ -112,7 +112,7 @@ Mamba是最近提出的一种具有代表性的基于SSM架构的模型，与ViT
 \textbf{序列增强 (“Easy” 分支)} 
 
 如图~\ref{figure3: SMCMIL}顶部所示，本章设计了一个基于注意力的序列增强模块来构建“Easy”分支。其核心思想是使用注意力机制识别高关注实例，然后通过Mixup对这些已识别的实例执行实例级增强。
-此过程生成生成新实例来补充原始序列。本章将每个实例的注意力得分定义为：
+此过程生成新实例来补充原始序列。本章将每个实例的注意力得分定义为：
 \begin{equation}
   \mathnormal{A}=[a_1,...,a_i,...,a_N]=\mathnormal{\phi}(\mathnormal{Z}),
   \label{eq8}
@@ -911,7 +911,7 @@ SRMamba  & 89.99$\pm$0.46& 94.73$\pm$0.62 &91.99$\pm$1.78& 77.27$\pm$0.31\\
   \label{figure4: maskratio}
 \end{figure}
 
-图~\ref{figure4: maskratio}讨论了超参数序列掩码率$\beta\%$的影响。本章与前一小节一致，同样在次级轴上绘制了BRACS-7$^\star$结果。
+图~\ref{figure4: maskratio}讨论了超参数序列掩码率$\beta\%$的影响。本小节与前一小节一致，同样在次级轴上绘制了BRACS-7$^\star$结果。
 所有数据集在$10\%$的序列掩码率下达到最佳性能。因此，除非另有说明，否则本章默认设置$\beta\% = 10\%$。
 
 \textbf{（8）Bootstrap检验}

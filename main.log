@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.17)  7 APR 2025 19:27
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.16)  19 APR 2025 14:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**d:/数据整理/硕士毕业论文/毕业论文-朱翔/CQU_Thesis2024-master/main
-(d:/数据整理/硕士毕业论文/毕业论文-朱翔/CQU_Thesis2024-master/main.tex
+**d:/GitHub/CQU_thesis/main
+(d:/GitHub/CQU_thesis/main.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (./cquthesis.cls
@@ -2840,11 +2840,11 @@ Package rerunfilecheck Info: File `main.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  44701 strings out of 476719
- 987084 string characters out of 5801423
+ 987012 string characters out of 5801423
  1968842 words of memory out of 5000000
  65797 multiletter control sequences out of 15000+600000
  585156 words of font info for 209 fonts, out of 8000000 for 9000
  37 hyphenation exceptions out of 8191
- 107i,17n,131p,1245b,1207s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 107i,17n,131p,1221b,1207s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on main.pdf (78 pages).
