@@ -251,8 +251,8 @@ Mamba是最近提出的一种具有代表性的基于SSM架构的模型，与ViT
 \textbf{（1）实验环境}
 
 
-本章实验依托于和上一章实验同样的设置环境和平台。该平台搭载AMD Ryzen 5700X 20 核中央处理器与 3 块 NVIDIA RTX 3090 图形处理器。
-实验框架基于 Python 编程语言构建，采用 OpenSlide 库实现病理图像的高效读取，基于 Matplotlib 库完成数据可视化。
+本章实验依托于和上一章实验同样的设置环境和平台。%该平台搭载AMD Ryzen 5700X 20 核中央处理器与 3 块 NVIDIA RTX 3090 图形处理器。
+%实验框架基于 Python 编程语言构建，采用 OpenSlide 库实现病理图像的高效读取，基于 Matplotlib 库完成数据可视化。
 详细的实验环境参数配置见表~\ref{table4: env}：
 
 \begin{table}[h!]
@@ -279,7 +279,7 @@ Mamba是最近提出的一种具有代表性的基于SSM架构的模型，与ViT
 
 \textbf{（2）数据集}
 
-本章通过三个WSI分析子任务来评估SMC-MIL模型：癌症诊断、亚型分类和生存预测。
+本章同样通过三个WSI分析子任务来评估SMC-MIL模型：癌症诊断、亚型分类和生存预测。
 对于癌症诊断任务，本章采用和上一章同样的设置，采用CAMELYON数据集进行评估。
 对于分型任务，本章使用 TCGA-NSCLC、TCGA-BRCA和BRACS~\cite{brancati2022bracs}数据集。
 同时为了评估生存预测的准确性，本章使用 TCGA-LUAD，TCGA-LUSC，TCGA-BLCA来评估生存预测任务的性能。
@@ -290,20 +290,21 @@ Mamba是最近提出的一种具有代表性的基于SSM架构的模型，与ViT
 具体来说，对于BRACS数据集，本章也遵循了来自官方的划分方案，在官方分区中将数据集分为395:65:87的训练集、验证集和测试集。
 本章进行了三次独立的重复实验，以尽量减少官方划分的随机影响。此外，为了在实验中保持与其他数据集的一致性，本章还对BRACS的7类分类任务进行了5次交叉验证实验，标记为BRACS-7$^\star$,并报告在表\ref{table4: BRACS_7}中。
 
-\textbf{（4）实施细节}
+%\textbf{（4）实施细节}
 
-按照之前的工作\cite{lu2021data,zhang2022dtfd,tang2023multiple}，每个WSI病理图像被裁剪成一系列$256 \times 256$的不重叠的贴片，放大倍数为20倍，同时丢弃背景区域（饱和度$< 15$）。
-本章使用在ImageNet \cite{deng2009imagenet}中预训练的ResNet-50模型\cite{he2016deep}和在$1\times 10^6$ WSIs的$1\times 10^8$ Patches的大型内部组织学数据集上预训练的最新基础模型UNI \cite{chen2024towards}作为骨干网络，
-从每个Patch中提取初始特征向量，其维度为1024。
-初始特征向量随后通过全连接层降为512维表示。
-在处理所有数据集时，将学习率设定为$2 \times 10^{\textnormal{-}4}$，权重衰减系数设为$10^{\textnormal{-}5}$。学习率的调整采用余弦退火策略，该策略能够使学习率随着训练轮次的增加而动态、平滑地变化，有助于模型更有效地收敛。
-所有模型均运用早停策略开展了 200 个轮次的训练。早停策略可在验证集性能不再提升时及时停止训练，防止模型过拟合，从而保证模型在测试集上具备良好的泛化能力。
-本章未引入梯度裁剪或梯度累积等优化技巧，以确保实验结果的纯粹性与方法对比的公平性。所有模型均基于标准训练流程完成参数优化，未采用任何额外的正则化技术或训练技巧。批量大小设置为1。
-所有实验均使用RTX 3090 GPU，在Ubuntu 20.04.4、Python版本3.10.11和PyTorch版本2.0.1的环境下进行。
+%按照之前的工作\cite{lu2021data,zhang2022dtfd,tang2023multiple}，每个WSI病理图像被裁剪成一系列$256 \times 256$的不重叠的贴片，放大倍数为20倍，同时丢弃背景区域（饱和度$< 15$）。
+%本章使用在ImageNet \cite{deng2009imagenet}中预训练的ResNet-50模型\cite{he2016deep}和在$1\times 10^6$ WSIs的$1\times 10^8$ Patches的大型内部组织学数据集上预训练的最新基础模型UNI \cite{chen2024towards}作为骨干网络，
+%从每个Patch中提取初始特征向量，其维度为1024。
+%初始特征向量随后通过全连接层降为512维表示。
+%在处理所有数据集时，将学习率设定为$2 \times 10^{\textnormal{-}4}$，权重衰减系数设为$10^{\textnormal{-}5}$。学习率的调整采用余弦退火策略，该策略能够使学习率随着训练轮次的增加而动态、平滑地变化，有助于模型更有效地收敛。
+%所有模型均运用早停策略开展了 200 个轮次的训练。早停策略可在验证集性能不再提升时及时停止训练，防止模型过拟合，从而保证模型在测试集上具备良好的泛化能力。
+%本章未引入梯度裁剪或梯度累积等优化技巧，以确保实验结果的纯粹性与方法对比的公平性。所有模型均基于标准训练流程完成参数优化，未采用任何额外的正则化技术或训练技巧。批量大小设置为1。
+%所有实验均使用RTX 3090 GPU，在Ubuntu 20.04.4、Python版本3.10.11和PyTorch版本2.0.1的环境下进行。
 
-\textbf{（5）对比方法}
+\textbf{（4）实施细节与对比方法}
 
-本文采用了10种广泛使用的MIL方法以及上一章研究的方法与本章方法进行比较。
+在实施细节上，本章采用与上一章实验同样的实验细节设置。
+在对比方法上，本文采用了10种广泛使用的MIL方法以及上一章研究的方法与本章方法进行比较。
 其中包括: AB-MIL~\cite{ilse2018attention},  CLAM~\cite{lu2021data}, 
 DSMIL~\cite{li2021dual}, TransMIL~\cite{shao2021transmil}, DTFD-MIL ~\cite{zhang2022dtfd},
 IBMIL ~\cite{lin2023interventional}, MHIM-MIL ~\cite{tang2023multiple},
@@ -777,6 +778,8 @@ Aug.表示应用了序列对比学习，Samp.表示使用采样策略扩展“ha
 实验结果表明，与OriginMamba相比，序列增强和掩码模块的引入分别增强了Mamba对序列内显著区域的区分能力。
 将这两个模块引入OriginMamba后，完整的SMC-MIL取得了最好的性能（在CAMELYON上AUC为93.81\%，在TCGA上AUC为96.65\%，在BRCA上AUC为93.98\%）。
 
+
+
 \textbf{（2）扫描不变性的验证分析}
 
 \begin{table}[h!]
@@ -840,24 +843,24 @@ SRMamba  & 89.99$\pm$0.46& 94.73$\pm$0.62 &91.99$\pm$1.78& 77.27$\pm$0.31\\
   \captionsetup{font={small, stretch=1.512}}
   \centering
   % \vspace{-10pt}
-  \bicaption[不同的分支对比策略对模型性能的影响]{不同的分支对比策略对模型性能的影响。最优结果用粗体表示，次优结果用下划线表示。}{Effects of different branch contrast strategies on model performance. The best results are shown in bold.}    % 中英文标题
+  \bicaption[不同的分支对比策略对模型性能的影响]{不同的分支对比策略对模型性能的影响。最优结果使用粗体表示，次优结果使用下划线表示。}{Effects of different branch contrast strategies on model performance. The best results are shown in bold.}    % 中英文标题
   \begin{tabularx}{\textwidth}{lCCCC}
     \toprule
     方法 & CAMELYON& NSCLC& BRACS-3& BRACS-7\\ \midrule
-  vanilla vs. hard & \underline{93.13$\pm$1.90} & 96.30$\pm$1.23 & 84.89$\pm$0.73 & \underline{76.52$\pm$0.32}\\
-  easy vs. vanilla & 92.64$\pm$1.33 & \underline{96.55$\pm$1.21} & 82.66$\pm$4.39 & 77.44$\pm$0.95 \\
-  hard vs. hard  &  90.39$\pm$2.55 & 95.79$\pm$1.48 & 82.57$\pm$1.83 & 77.22$\pm$2.65 \\
-  easy vs. easy & 91.66$\pm$2.10 & 96.35$\pm$1.23  & \underline{85.63$\pm$0.84} & 74.48$\pm$1.61 \\ 
-  \textbf{easy vs. hard} & \textbf{93.81$\pm$1.65} & \textbf{96.65$\pm$1.46} & \textbf{87.74$\pm$0.36} & \textbf{79.57$\pm$0.42} \\
+  Vanilla vs. Hard & \underline{93.13$\pm$1.90} & 96.30$\pm$1.23 & 84.89$\pm$0.73 & \underline{76.52$\pm$0.32}\\
+  Easy vs. Vanilla & 92.64$\pm$1.33 & \underline{96.55$\pm$1.21} & 82.66$\pm$4.39 & 77.44$\pm$0.95 \\
+  Hard vs. Hard  &  90.39$\pm$2.55 & 95.79$\pm$1.48 & 82.57$\pm$1.83 & 77.22$\pm$2.65 \\
+  Easy vs. Easy & 91.66$\pm$2.10 & 96.35$\pm$1.23  & \underline{85.63$\pm$0.84} & 74.48$\pm$1.61 \\ 
+  \textbf{Easy vs. Hard} & \textbf{93.81$\pm$1.65} & \textbf{96.65$\pm$1.46} & \textbf{87.74$\pm$0.36} & \textbf{79.57$\pm$0.42} \\
     \bottomrule
   \end{tabularx}
   % \vspace{-25pt}
   \label{table4: Different branch}
 \end{table}
 
-表\ref{table4: Different branch}列出了五种不同分支对比策略下SMC-MIL的性能。结果表明，“easy vs hard”策略产生最佳性能。
+表\ref{table4: Different branch}列出了五种不同分支对比策略下SMC-MIL的性能。结果表明，“Easy vs. Hard”策略产生最佳性能。
 表现如此优异的主要原因是“Easy”分支帮助Mamba产生可靠的包表示和分类，而“hard”分支迫使模型不仅要学习扫描无关的特征，还要从被屏蔽序列中探索更多的判别实例，以实现两个分支之间的一致性。
-此外，两个分支的差异也有利于性能提升。“hard vs hard”策略表现最差。本章将其性能较差归因于在包表示和分类中缺乏来自“Easy”分支的可靠指导。
+此外，两个分支的差异也有利于性能提升。“Hard vs. Hard”策略表现最差。本章将其性能较差归因于在生成包表示和分类过程中缺乏来自“Easy”分支的可靠指导。
 
 \textbf{（5）讨论不同扫描模式的组合对模型性能的影响}
 
@@ -897,7 +900,7 @@ SRMamba  & 89.99$\pm$0.46& 94.73$\pm$0.62 &91.99$\pm$1.78& 77.27$\pm$0.31\\
   \label{figure4: mixratio}
 \end{figure}
 
-图~\ref{figure4: mixratio}讨论了超参数序列增强率$\alpha\%$的影响。为了更好地突出实验结果，本章将BRACS-7$^\star$结果绘制在副轴上。
+图\ref{figure4: mixratio}讨论了超参数序列增强率$\alpha\%$的影响。为了更好地突出实验结果，本章将BRACS-7$^\star$结果绘制在副轴上。
 如图所示，除CAMELYON外，大多数数据集在序列增强率为0.1时达到最佳性能，CAMELYON在$\alpha\%=40\%$时达到峰值。为了保持一致性，本章将所有数据集的序列扩增率$\alpha\%$默认设置为$10\%$。
 
 
@@ -1048,6 +1051,11 @@ SRMamba  & 89.99$\pm$0.46& 94.73$\pm$0.62 &91.99$\pm$1.78& 77.27$\pm$0.31\\
 本章的方法优于其它基于Mamba的方法。在CAMELYON数据集上，它在精度、AUC和F1-score方面分别比次优的方法提高了0.29\%、0.55\%和0.53\%。这些指标在NSCLC数据集中分别为0.74\%，0.36\%和1.15\%。
 最后，BRCA数据集的改进也值得注意，Acc提高了0.93\%，AUC提高了1.31\%，F1-score提高了0.37\%。
 这进一步表明，即使使用非传统的ResNet-50特征提取器，本章方法的性能改进也不仅仅是依赖于简单的多个Mamba分支合并，而是正确捕获了空间信息与视觉特征。
+
+\textbf{（11）Mamba效率优势的验证分析}
+
+
+为了说明
 
 
 

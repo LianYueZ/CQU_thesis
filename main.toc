@@ -16,7 +16,7 @@
 \contentsline {subsection}{\numberline {\raisebox {0.0mm}{2.3.1}}\hspace {-2pt}基于负样本的对比学习}{12}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {\raisebox {0.0mm}{2.3.2}}\hspace {-2pt}无负样本的对比学习}{12}{subsection.2.3.2}%
 \contentsline {section}{\numberline {\raisebox {0.0mm}{2.4}}\hspace {-2pt}数据集及评价指标}{12}{section.2.4}%
-\contentsline {subsection}{\numberline {\raisebox {0.0mm}{2.4.1}}\hspace {-2pt}数据集}{12}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {\raisebox {0.0mm}{2.4.1}}\hspace {-2pt}数据集}{13}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {\raisebox {0.0mm}{2.4.2}}\hspace {-2pt}评价指标}{15}{subsection.2.4.2}%
 \contentsline {section}{\numberline {\raisebox {0.0mm}{2.5}}\hspace {-2pt}病理图像的预处理过程}{15}{section.2.5}%
 \contentsline {section}{\numberline {\raisebox {0.0mm}{2.6}}\hspace {-2pt}本章小结}{16}{section.2.6}%
@@ -48,10 +48,10 @@
 \contentsline {subsection}{\numberline {\raisebox {0.0mm}{4.2.7}}\hspace {-2pt}模型推理}{41}{subsection.4.2.7}%
 \contentsline {section}{\numberline {\raisebox {0.0mm}{4.3}}\hspace {-2pt}实验设置及结果分析}{41}{section.4.3}%
 \contentsline {subsection}{\numberline {\raisebox {0.0mm}{4.3.1}}\hspace {-2pt}实验设置}{42}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {\raisebox {0.0mm}{4.3.2}}\hspace {-2pt}基准数据集实验结果}{44}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {\raisebox {0.0mm}{4.3.3}}\hspace {-2pt}消融实验}{49}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {\raisebox {0.0mm}{4.3.4}}\hspace {-2pt}可视化分析}{56}{subsection.4.3.4}%
-\contentsline {section}{\numberline {\raisebox {0.0mm}{4.4}}\hspace {-2pt}本章小结}{57}{section.4.4}%
+\contentsline {subsection}{\numberline {\raisebox {0.0mm}{4.3.2}}\hspace {-2pt}基准数据集实验结果}{43}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {\raisebox {0.0mm}{4.3.3}}\hspace {-2pt}消融实验}{48}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {\raisebox {0.0mm}{4.3.4}}\hspace {-2pt}可视化分析}{55}{subsection.4.3.4}%
+\contentsline {section}{\numberline {\raisebox {0.0mm}{4.4}}\hspace {-2pt}本章小结}{55}{section.4.4}%
 \contentsline {chapter}{\numberline {\raisebox {0.0mm}{5}}\hspace {0pt}总结与未来展望}{58}{chapter.5}%
 \contentsline {section}{\numberline {\raisebox {0.0mm}{5.1}}\hspace {-2pt}总结}{58}{section.5.1}%
 \contentsline {section}{\numberline {\raisebox {0.0mm}{5.2}}\hspace {-2pt}未来展望}{59}{section.5.2}%

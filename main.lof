@@ -24,9 +24,9 @@
 \contentsline {figure}{\numberline {4.2}{\ignorespaces SMC-MIL模型推理流程示意图}}{42}{figure.caption.28}%
 \contentsline {figure}{\numberline {4.3}{\ignorespaces 不同Mamba变体的扫描不变性评估的双样本t检验}}{50}{figure.caption.32}%
 \contentsline {figure}{\numberline {4.4}{\ignorespaces 不同Mamba模型性能比对柱状图}}{51}{figure.caption.33}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces 不同序列增强率$\alpha \%$下的模型性能折线图}}{53}{figure.caption.36}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces 不同序列增强率$\alpha \%$下的模型性能折线图}}{52}{figure.caption.36}%
 \contentsline {figure}{\numberline {4.6}{\ignorespaces 不同序列掩码率$\beta \%$下的模型性能折线图}}{53}{figure.caption.37}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces 与SOTA方法性能比较的Bootstrap检验}}{54}{figure.caption.38}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces 与SOTA方法性能比较的Bootstrap检验}}{53}{figure.caption.38}%
 \contentsline {figure}{\numberline {4.8}{\ignorespaces 原始Mamba(baseline)和SMC-MIL关注的图块可视化结果}}{56}{figure.caption.43}%
 \contentsline {figure}{\numberline {4.9}{\ignorespaces 原始Mamba(baseline)和SMC-MIL聚合特征t-SNE可视化结果}}{57}{figure.caption.44}%
 \addvspace {10\p@ }

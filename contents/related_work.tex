@@ -41,7 +41,7 @@ Shao等人~\cite{shao2021transmil}将Transformer架构引入多实例学习框�
 
 \section[\hspace{-2pt}Mamba架构]{{\heiti\zihao{-3} \hspace{-8pt}Mamba架构}}\label{section2: Mamba架构}
 
-Mamba架构是由Albert Gu和Tri Dao等人于2023年提出的新型序列建模框架~\cite{gu2023mamba}，其核心创新在于将状态空间模型（State Space Model, SSM）与选择性机制（Selective Mechanism）相结合，
+如图\ref{figure1: Mamba架构示意图}，Mamba架构是由Albert Gu和Tri Dao等人于2023年提出的新型序列建模框架~\cite{gu2023mamba}，其核心创新在于将状态空间模型（State Space Model, SSM）与选择性机制（Selective Mechanism）相结合，
 突破了传统Transformer模型在长序列建模中的局限性。该架构通过建立线性时间复杂度与序列长度的关系，显著提升了模型处理长序列依赖的能力，在自然语言处理、基因组学分析、计算机视觉等领域展现出显著优势。
 
 从数学基础来看，Mamba架构以连续时间状态空间模型为理论框架。其核心微分方程可表述为:
@@ -84,7 +84,7 @@ Mamba架构是由Albert Gu和Tri Dao等人于2023年提出的新型序列建模�
 \label{equation2: infoNCE}
 \mathcal{L} = - \text{log}\frac{\text{exp}(cos(f(x), f(x^+)) / \tau)}{\text{exp}(cos(f(x), f(x^+)) + \sum_{j=1}^{N} \text{exp}(cos(f(x), f(x^-))}.
 \end{equation}
-根据对比学习是否有负样本可以将对比学习分为两类：基于负样本的对比学习、无负样本的对比学习，以下将分别介绍。
+图\ref{figure1: 对比学习结构示意图}展示了一些具有代表性的对比学习结构。根据对比学习是否有负样本可以将对比学习分为两类：基于负样本的对比学习、无负样本的对比学习，以下将分别介绍。
 
 \subsection[\hspace{-2pt}基于负样本的对比学习]{{\heiti\zihao{4} \hspace{-8pt}基于负样本的对比学习}}\label{section2: 基于负样本的对比学习}
 
@@ -175,16 +175,18 @@ CAMELYON-17数据集则进一步整合荷兰五所医疗机构的病理资源，
 考虑到CAMELYON-17官方测试集500张样本的标注信息尚未开放，本研究仅采用其已公开的500张训练样本（对应100个临床病例及其影像学诊断结论）。
 尽管不少研究，如文献~\cite{li2021dual,shao2021transmil,tang2023multiple,tang2024feature}，采用CAMELYON-16~\cite{bejnordi2017diagnostic}数据集，对不同模型在癌症诊断任务中的性能展开评估。
 然而，该数据集仅包含 400 张病理图像，图像数量的局限性，削弱了评估结果的有效性。鉴于此，本文参照 CLAM~\cite{lu2021data}的设置，将CAMELYON-16 与 CAMELYON-17 数据集整合，
-最终形成包含370个病例、899张有效样本（阴性样本591例，阳性样本308例）的融合数据集。经预处理后，所有病理图像在20倍光学放大倍率下完成分块处理，单张WSI平均生成8108个有效图像块。
+最终形成包含370个病例、899张有效样本（阴性样本591例，阳性样本308例）的融合数据集（见表\ref{table2: dataset1}）。经预处理后，所有病理图像在20倍光学放大倍率下完成分块处理，单张WSI平均生成8108个有效图像块。
 
-\textbf{\textcircled{2}亚型分型数据集}
+\textbf{\textcircled{2}亚型分类数据集}
 
-TCGA肺癌数据集（\textbf{TCGA-NSCLC}）是由美国国家癌症研究所（NationalCancerInstitute, NCI）开发的癌症数据共享系统（The Cancer Genome Atlas, 简称TCGA）。
+本文采用了TCGA肺癌数据集、浸润性乳腺癌数据集、和乳腺癌亚型数据集作为亚型分类的评估数据集。其相关数目详情如表\ref{table2: dataset1}所示。
+
+TCGA肺癌数据集（\textbf{TCGA-NSCLC}）是由美国国家癌症研究所（National Cancer Institute, NCI）开发的癌症数据共享系统（The Cancer Genome Atlas, 简称TCGA）。
 TCGA包括肺鳞状细胞癌（TCGA-LUSC）和肺腺癌（TCGA-LUAD）两类数据，TCGA-LUSC的 478个病例中有512个WSI，
 TCGA-LUAD 478个病例中有541个WSI，共1053个WSI。该数据集仅给出了图像级别的标签。和CAMELYON数据集相比，它的阳性样本中肿瘤区域明显大很多。
 TCGA 数据集采用了跟 CAMELYON 数据集一样的数据预处理方法。经过处理后，每一幅放大 20 倍的图像大概能产生 10300 个图像块。TCGA 数据集仅仅提供了图像类别的标注信息，并没有提供细致的像素标注内容。
 
-浸润性乳腺癌数据集（Invasive Breast CCarcinoma, \textbf{BRCA}）是肿瘤基因组图谱大型国际研究项目（TCGA）的一个子项目，致力于了解和研究乳腺癌（BRCA）的基因组特征。BRCA项目系统地收集了来自不同乳腺癌患者队列的肿瘤样本，包括原发肿瘤和转移瘤，以及正常对照组织样本（如非癌乳腺组织）。其中浸润性导管癌（IDC） 779张，浸润性小叶癌（ILC） 198张。
+浸润性乳腺癌数据集（Breast Invasive Carcinoma, \textbf{BRCA}）是肿瘤基因组图谱大型国际研究项目（TCGA）的一个子项目，致力于了解和研究乳腺癌（BRCA）的基因组特征。BRCA项目系统地收集了来自不同乳腺癌患者队列的肿瘤样本，包括原发肿瘤和转移瘤，以及正常对照组织样本（如非癌乳腺组织）。其中浸润性导管癌（IDC） 779张，浸润性小叶癌（ILC） 198张。
 
 \textbf{BRACS}~\cite{brancati2022bracs}是一个同时用于粗粒度和细粒度分型的乳腺癌亚型数据集。其建立在帕斯卡尔基金会（IRCCS Fondazione Pascale）、美国国家研究委员会（National Research Council CNR）的高性能计算与网络研究所（ICAR）和IBM苏黎世研究中心之间的一项协议之上，该协议旨在“通过组织学图像的自动分析来识别乳腺癌病理学中的非典型肿瘤的方法和工具的开发”。在粗粒度的BRACS分型任务中，每个WSI可分为良性（Benign）、非典型（Atypical）和恶性肿瘤（Malignant）。在细粒度的BRACS分型任务中，将每一种WSI分为正常（Normal）、病理良性（Pathological Benign, PB）、普通型导管增生（Usual Ductal Hyperplasia, UDH）、不典型导管增生（Atypical Ductal Hyperplasia, ADH）、扁平上皮不典型（Flat Epithelial Atypia, FEA）、导管原位癌（Ductal Carcinoma in Situ, DCIS）和浸润性癌（Invasive Carcinoma, IC）。其中Normal、PB、UDH被分为良性病灶；FEA、ADH被归类为非典型（Atypical）；DCIS和IC被归为恶性肿瘤（Malignant）。BRCAS数据集被官方划分为395个WSIs的训练集、65个WSIs的验证集和87个WSIs的测试集以用于评估。
 
@@ -195,6 +197,7 @@ TCGA 数据集采用了跟 CAMELYON 数据集一样的数据预处理方法。�
 需要特别说明的是，与上文所述诊断及分型任务不同，生存预测模型以独立病例为最小分析单元：
 TCGA-LUAD与TCGA-LUSC项目沿用分型研究中的原始影像数据，但重新构建了包含生存时间、复发状态等临床终点的标注体系；
 TCGA-BLCA数据集则专门收录376例膀胱尿路上皮癌（Bladder Urothelial Carcinom）患者的完整临床随访记录。
+三个数据集的相关数目详情见表\ref{table2: dataset2}。
 在实验设计层面，通过整合多中心临床数据构建生存分析框架，重点考察模型对患者个体化生存曲线的预测效能。
 
 \subsection[\hspace{-2pt}评价指标]{{\heiti\zihao{4} \hspace{-8pt}评价指标}}\label{section2: 评价指标}
