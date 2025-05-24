@@ -1,0 +1,64 @@
+\contentsline {chapter}{摘\hskip \ccwd {}\hskip \ccwd {}要}{I}{chapter*.1}%
+\contentsline {chapter}{Abstract}{II}{chapter*.2}%
+\contentsline {chapter}{图目录}{VI}{section*.3}%
+\contentsline {chapter}{表目录}{VII}{section*.4}%
+\contentsline {chapter}{\numberline {\raisebox {0.0mm}{1}}\hspace {0pt}绪\hskip \ccwd {}论}{1}{chapter.1}%
+\contentsline {section}{\numberline {\raisebox {0.0mm}{1.1}}\hspace {-2pt}研究背景及意义}{1}{section.1.1}%
+\contentsline {section}{\numberline {\raisebox {0.0mm}{1.2}}\hspace {-2pt}国内外研究现状与挑战}{3}{section.1.2}%
+\contentsline {subsection}{\numberline {\raisebox {0.0mm}{1.2.1}}\hspace {-2pt}数字病理图像分类研究现状}{3}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {\raisebox {0.0mm}{1.2.2}}\hspace {-2pt}视觉Mamba研究现状}{4}{subsection.1.2.2}%
+\contentsline {section}{\numberline {\raisebox {0.0mm}{1.3}}\hspace {-2pt}本文研究内容与创新点}{6}{section.1.3}%
+\contentsline {section}{\numberline {\raisebox {0.0mm}{1.4}}\hspace {-2pt}本文组织结构}{8}{section.1.4}%
+\contentsline {chapter}{\numberline {\raisebox {0.0mm}{2}}\hspace {0pt}相关研究技术与理论}{9}{chapter.2}%
+\contentsline {section}{\numberline {\raisebox {0.0mm}{2.1}}\hspace {-2pt}数字病理图像多实例学习}{9}{section.2.1}%
+\contentsline {section}{\numberline {\raisebox {0.0mm}{2.2}}\hspace {-2pt}Mamba架构}{10}{section.2.2}%
+\contentsline {section}{\numberline {\raisebox {0.0mm}{2.3}}\hspace {-2pt}对比学习}{11}{section.2.3}%
+\contentsline {subsection}{\numberline {\raisebox {0.0mm}{2.3.1}}\hspace {-2pt}基于负样本的对比学习}{12}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {\raisebox {0.0mm}{2.3.2}}\hspace {-2pt}无负样本的对比学习}{12}{subsection.2.3.2}%
+\contentsline {section}{\numberline {\raisebox {0.0mm}{2.4}}\hspace {-2pt}数据集及评价指标}{12}{section.2.4}%
+\contentsline {subsection}{\numberline {\raisebox {0.0mm}{2.4.1}}\hspace {-2pt}数据集}{13}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {\raisebox {0.0mm}{2.4.2}}\hspace {-2pt}评价指标}{15}{subsection.2.4.2}%
+\contentsline {section}{\numberline {\raisebox {0.0mm}{2.5}}\hspace {-2pt}病理图像的预处理过程}{15}{section.2.5}%
+\contentsline {section}{\numberline {\raisebox {0.0mm}{2.6}}\hspace {-2pt}本章小结}{16}{section.2.6}%
+\contentsline {chapter}{\numberline {\raisebox {0.0mm}{3}}\hspace {0pt}基于多扫描Mamba的高分辨率病理图像分类研究}{17}{chapter.3}%
+\contentsline {section}{\numberline {\raisebox {0.0mm}{3.1}}\hspace {-2pt}研究动机}{17}{section.3.1}%
+\contentsline {section}{\numberline {\raisebox {0.0mm}{3.2}}\hspace {-2pt}问题描述和符号定义}{18}{section.3.2}%
+\contentsline {section}{\numberline {\raisebox {0.0mm}{3.3}}\hspace {-2pt}基于空间信息增强的多扫描Mamba模型}{19}{section.3.3}%
+\contentsline {subsection}{\numberline {\raisebox {0.0mm}{3.3.1}}\hspace {-2pt}方法概述}{19}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {\raisebox {0.0mm}{3.3.2}}\hspace {-2pt}预处理与特征提取}{20}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {\raisebox {0.0mm}{3.3.3}}\hspace {-2pt}多扫描Mamba模块}{20}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {\raisebox {0.0mm}{3.3.4}}\hspace {-2pt}2D空间上下文感知模块}{22}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {\raisebox {0.0mm}{3.3.5}}\hspace {-2pt}基于Mamba的实例聚合}{22}{subsection.3.3.5}%
+\contentsline {subsection}{\numberline {\raisebox {0.0mm}{3.3.6}}\hspace {-2pt}模型优化和推理}{23}{subsection.3.3.6}%
+\contentsline {section}{\numberline {\raisebox {0.0mm}{3.4}}\hspace {-2pt}实验设置及结果分析}{23}{section.3.4}%
+\contentsline {subsection}{\numberline {\raisebox {0.0mm}{3.4.1}}\hspace {-2pt}实验设置}{23}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {\raisebox {0.0mm}{3.4.2}}\hspace {-2pt}基准数据集实验结果}{25}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {\raisebox {0.0mm}{3.4.3}}\hspace {-2pt}消融实验}{29}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {\raisebox {0.0mm}{3.4.4}}\hspace {-2pt}可视化分析}{33}{subsection.3.4.4}%
+\contentsline {section}{\numberline {\raisebox {0.0mm}{3.5}}\hspace {-2pt}本章小结}{34}{section.3.5}%
+\contentsline {chapter}{\numberline {\raisebox {0.0mm}{4}}\hspace {0pt}基于扫描不变性Mamba的高分辨率病理图像分类研究}{36}{chapter.4}%
+\contentsline {section}{\numberline {\raisebox {0.0mm}{4.1}}\hspace {-2pt}研究动机}{36}{section.4.1}%
+\contentsline {section}{\numberline {\raisebox {0.0mm}{4.2}}\hspace {-2pt}基于序列差异化对比的Mamba模型}{37}{section.4.2}%
+\contentsline {subsection}{\numberline {\raisebox {0.0mm}{4.2.1}}\hspace {-2pt}方法概述}{37}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {\raisebox {0.0mm}{4.2.2}}\hspace {-2pt}预处理与特征提取}{37}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {\raisebox {0.0mm}{4.2.3}}\hspace {-2pt}基于Mamba的双分支对比架构}{38}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {\raisebox {0.0mm}{4.2.4}}\hspace {-2pt}差异化序列生成（简单与困难分支）}{39}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {\raisebox {0.0mm}{4.2.5}}\hspace {-2pt}基于Mamba的实例聚合}{40}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {\raisebox {0.0mm}{4.2.6}}\hspace {-2pt}基于一致性的模型优化}{41}{subsection.4.2.6}%
+\contentsline {subsection}{\numberline {\raisebox {0.0mm}{4.2.7}}\hspace {-2pt}模型推理}{41}{subsection.4.2.7}%
+\contentsline {section}{\numberline {\raisebox {0.0mm}{4.3}}\hspace {-2pt}实验设置及结果分析}{41}{section.4.3}%
+\contentsline {subsection}{\numberline {\raisebox {0.0mm}{4.3.1}}\hspace {-2pt}实验设置}{42}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {\raisebox {0.0mm}{4.3.2}}\hspace {-2pt}基准数据集实验结果}{43}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {\raisebox {0.0mm}{4.3.3}}\hspace {-2pt}消融实验}{48}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {\raisebox {0.0mm}{4.3.4}}\hspace {-2pt}可视化分析}{55}{subsection.4.3.4}%
+\contentsline {section}{\numberline {\raisebox {0.0mm}{4.4}}\hspace {-2pt}本章小结}{55}{section.4.4}%
+\contentsline {chapter}{\numberline {\raisebox {0.0mm}{5}}\hspace {0pt}总结与未来展望}{58}{chapter.5}%
+\contentsline {section}{\numberline {\raisebox {0.0mm}{5.1}}\hspace {-2pt}总结}{58}{section.5.1}%
+\contentsline {section}{\numberline {\raisebox {0.0mm}{5.2}}\hspace {-2pt}未来展望}{59}{section.5.2}%
+\contentsline {chapter}{参考文献}{61}{section*.45}%
+\contentsline {chapter}{附\hskip \ccwd {}\hskip \ccwd {}录}{66}{appendix*.47}%
+\contentsline {section}{\numberline {A.}\hspace {-2pt}作者在攻读硕士学位期间的论文和专利目录}{66}{section.Alph0.1}%
+\contentsline {section}{\numberline {B.}\hspace {-2pt}作者在攻读硕士学位期间参与的科研项目}{66}{section.Alph0.2}%
+\contentsline {section}{\numberline {C.}\hspace {-2pt}学位论文数据集}{67}{section.Alph0.3}%
+\contentsline {chapter}{致\hskip \ccwd {}\hskip \ccwd {}谢}{68}{appendix*.49}%
+\contentsfinish 
