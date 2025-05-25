@@ -17,7 +17,7 @@
 在这个范式中，由于病理图像的高分辨率特性，导致其划分后的实例数目过多，因此WSI分类可以被视为一个长序列建模问题，通过将包中的大量实例视为标记来处理，能够建模实例与整个包之间的空间上下文相关性，以捕捉判别性信息。
 一些基于状态空间模型（State Space Model，SSM）的方法被设计来有效对长序列进行建模。
 Mamba是最近提出的一种具有代表性的基于SSM架构的模型，与ViT相比具有更好的长序列建模性能，但需要的计算资源更少~\cite{zhu2024vision}。
-然而，在Mamba模型和MIL任务之间存在一个根本的区别：如图~\ref{figure1: Mamba模型与MIL任务差异}所示，Mamba作为扫描序列敏感模型，其性能高度依赖实例的输入顺序，这与多实例学习的序列不变性要求存在本质冲突，导致模型在病理图像分类任务中易受随机序列干扰而产生性能波动。
+然而，在Mamba模型和MIL任务之间存在一个根本的区别：如图\ref{figure1: Mamba模型与MIL任务差异}所示，Mamba作为扫描序列敏感模型，其性能高度依赖实例的输入顺序，这与多实例学习的序列不变性要求存在本质冲突，导致模型在病理图像分类任务中易受随机序列干扰而产生性能波动。
 
 为了调和扫描敏感的Mamba和扫描不变的MIL之间的差异，以前的工作包括上一章的方法都主要是将不同扫描模式的图像Patch序列输入到Mamba中，然后将多个输出序列聚合。
 例如，MamMIL~\cite{fang2024mammil}结合了Bi-SSM和2D-CAB模块以整合来自原始序列、反向序列和局部序列的扫描模式信息。
@@ -35,7 +35,7 @@ Mamba是最近提出的一种具有代表性的基于SSM架构的模型，与ViT
 在MIL中，Mamba的输出不应该依赖于实例输入顺序，也不应该对实例数量敏感。
 换句话说，MIL对于实例输入是扫描不变的。在这种情况下，本章精心设计了一个基于对比学习的扫描不变Mamba模型，旨在更好地将先进的Mamba模型适应于MIL任务。
 
-如图~\ref{figure3: SMCMIL}所示，本章的模型由两个Mamba分支组成。一个是“Easy”的分支，而另一个是“Hard”的分支。
+如图\ref{figure3: SMCMIL}所示，本章的模型由两个Mamba分支组成。一个是“Easy”的分支，而另一个是“Hard”的分支。
 在“Easy”分支中，对高度关注的实例通过Mixup生成越来越多的突出实例，从而降低包分类的难度。
 而在“Hard”分支中，将容易分类的实例进行掩码，以提高包分类的难度。
 显然，这两个分支在扫描顺序、实例数目和包分类难度上存在较大差异。
@@ -111,7 +111,7 @@ Mamba是最近提出的一种具有代表性的基于SSM架构的模型，与ViT
 
 \textbf{序列增强 (“Easy” 分支)} 
 
-如图~\ref{figure3: SMCMIL}顶部所示，本章设计了一个基于注意力的序列增强模块来构建“Easy”分支。其核心思想是使用注意力机制识别高关注实例，然后通过Mixup对这些已识别的实例执行实例级增强。
+如图\ref{figure3: SMCMIL}顶部所示，本章设计了一个基于注意力的序列增强模块来构建“Easy”分支。其核心思想是使用注意力机制识别高关注实例，然后通过Mixup对这些已识别的实例执行实例级增强。
 此过程生成新实例来补充原始序列。本章将每个实例的注意力得分定义为：
 \begin{equation}
   \mathnormal{A}=[a_1,...,a_i,...,a_N]=\mathnormal{\phi}(\mathnormal{Z}),
@@ -135,7 +135,7 @@ Mamba是最近提出的一种具有代表性的基于SSM架构的模型，与ViT
 
 \textbf{序列掩码(“Hard”分支)} 
 
-如图~\ref{figure3: SMCMIL}底部所示，本章采用基于注意力的掩蔽机制来掩盖“Hard”分支中容易区分的实例，迫使Mamba增强其鉴别可判别性区域的能力。对于分类模型，本章认为具有最高和最低关注值的实例是最容易区分的。
+如图\ref{figure3: SMCMIL}底部所示，本章采用基于注意力的掩蔽机制来掩盖“Hard”分支中容易区分的实例，迫使Mamba增强其鉴别可判别性区域的能力。对于分类模型，本章认为具有最高和最低关注值的实例是最容易区分的。
 因此，本章试图掩盖这些实例，以迫使模型学习更精确的分类边界。具体来说，本章生成一个$n$维掩码向量$M$如下所示：
   \begin{equation}
     \mathnormal{M}=[m_1,...,m_i,...,m_N],
@@ -236,9 +236,9 @@ Mamba是最近提出的一种具有代表性的基于SSM架构的模型，与ViT
 \textbf{采用序列增强模块进行推理:} 给定一张图像$X$经过图像预处理操作后得到实例特征序列，送入到序列增强模块获得新的序列。
 继续送入Mamba模块后建模各实例间信息，建模出更好的特征。
 最终，通过聚合模块输出包特征，将其输入分类网络以生成最终预测结果。
-具体推理流程详见图~\ref{figure3:推理流程1}。
+具体推理流程详见图\ref{figure3:推理流程1}。
 
-\textbf{不采用序列增强模块进行推理:} 本章还尝试了不采用序列增强模块直接进行输入至Mamba模块进行推理。推理流程详情见图~\ref{figure3:推理流程2}所示。
+\textbf{不采用序列增强模块进行推理:} 本章还尝试了不采用序列增强模块直接进行输入至Mamba模块进行推理。推理流程详情见图\ref{figure3:推理流程2}所示。
 
 在不特别说明的情况下，本文采用序列增强模块进行推理。
 
@@ -253,7 +253,7 @@ Mamba是最近提出的一种具有代表性的基于SSM架构的模型，与ViT
 
 本章实验依托于和上一章实验同样的设置环境和平台。%该平台搭载AMD Ryzen 5700X 20 核中央处理器与 3 块 NVIDIA RTX 3090 图形处理器。
 %实验框架基于 Python 编程语言构建，采用 OpenSlide 库实现病理图像的高效读取，基于 Matplotlib 库完成数据可视化。
-详细的实验环境参数配置见表~\ref{table4: env}：
+详细的实验环境参数配置见表\ref{table4: env}：
 
 \begin{table}[h!]
   \small    % 设置表格字体为5号
@@ -602,7 +602,7 @@ R$^2$T-MIL ~\cite{tang2024feature}& 52.84$\pm$3.81 &{83.96$\pm$1.73}& 49.11$\pm$
 \end{xltabular}}
 
 
-%表~\ref{table4: CAMELYON}和表~\ref{table4: NSCLC}给出了各种MIL方法在CAMELYON和NSCLC数据集上的癌症诊断和分型性能。
+%表\ref{table4: CAMELYON}和表\ref{table4: NSCLC}给出了各种MIL方法在CAMELYON和NSCLC数据集上的癌症诊断和分型性能。
 %这些结果表明，本章的方法在所有基准测试的所有指标下都实现了最佳性能。
 %具体来说，在CAMELYON数据集上，本章的方法在Accuracy、AUC和F1-score方面分别比第二好的方法提高了0.21\%、0.79\%和0.28\%。
 %这些数据在NSCLC数据集中分别为0.37\%，0.45\%和0.42\%。
@@ -625,17 +625,17 @@ Accuracy 较次优方法提升0.37\%，AUC 提升0.45\%，F1 - score 提升0.42\
 
 
 表\ref{table4: BRCA}报告了BRCA数据集上的亚型分类性能比较。
-观察结果与表格~\ref{table4: CAMELYON}和~\ref{table4: NSCLC}所示一致。
+观察结果与表格\ref{table4: CAMELYON}和\ref{table4: NSCLC}所示一致。
 本章的模型在所有指标上都达到了最先进的性能。
 与次优方法相比，该方法在BRCA数据集上的Accuracy、AUC和F1-score分别提高了0.9\%、0.48\%和1.49\%。
 在与SRMamba模型相比，Accuracy、AUC和F1-score分别增加了2.02\%,0.67\%,2.5\%。
 
 
 表\ref{table4: BRACS3}，表\ref{table4: BRACS7}和表\ref{table4: BRACS_7}展示了BRACS数据集上亚型分类性能。
-其中，表~\ref{table4: BRACS3}和表~\ref{table4: BRACS7}报告了在BRACS数据集上使用官方划分的3类和7类分类的性能结果。
+其中，表\ref{table4: BRACS3}和表\ref{table4: BRACS7}报告了在BRACS数据集上使用官方划分的3类和7类分类的性能结果。
 结果表明，与基线相比，本章的方法仍然具有优势。
 例如，本章的方法在这两个任务上分别将AUC中的SRMamba提高了4.62\%和4.65\%。
-同时，为了与前文保持设置一致性，表~\ref{table4: BRACS_7}展示了在BRACS五折交叉验证下细粒度分类的结果。
+同时，为了与前文保持设置一致性，表\ref{table4: BRACS_7}展示了在BRACS五折交叉验证下细粒度分类的结果。
 与次优方法相比，本章方法在该设置下的Accuracy、AUC和F1-score分别提高了1.81\%、1.51\%和3.68\%。
 这些结果都清楚地表明，本章方法的显著性能提升不仅仅归功于 Mamba 本身强大的建模能力，还证实了该方法的扫描不变性能够更好帮助 Mamba 解决 MIL（多实例学习）问题。
 
@@ -735,12 +735,13 @@ Accuracy 较次优方法提升0.37\%，AUC 提升0.45\%，F1 - score 提升0.42\
 \end{xltabular}}
 
 
-表~\ref{table4: Survival_r50}和表~\ref{table4: Survival_uni}分别给出了使用R50和UNI作为特征提取器在三个生存预测数据集上的实验结果。
+表\ref{table4: Survival_r50}和表\ref{table4: Survival_uni}分别给出了使用R50和UNI作为特征提取器在三个生存预测数据集上的实验结果。
 本章提出的SMC-MIL模型表现出很强的性能，在BLCA数据集上的C-index 得分为61.96\%，在LUAD上的得分为65.05\%，在LUSC上的得分为61.64\%。
 其明显优于比较的方法，在每个数据集上分别比除上一章外的次优方法提高了0.98\%，1.00\%和0.73\%。此外，
 即使在利用基础模型提取的高质量特征时，SMC-MIL也会产生不错的性能。
 特别地，与SRMamba相比，它在BLCA、LUAD和LUSC数据集上的性能分别提高了0.56\%、1.87\%和4.17\%。
 这些结果强调了本章提出的策略的一致性和可靠性，强调了其在预测生存结果方面的有效性。
+
 
 
 \subsection[\hspace{-2pt}消融实验]{{\heiti\zihao{4} \hspace{-8pt}消融实验}}\label{section4: 消融实验}
@@ -816,7 +817,7 @@ SRMamba  & 89.99$\pm$0.46& 94.73$\pm$0.62 &91.99$\pm$1.78& 77.27$\pm$0.31\\
 值得注意的是，本章的方法不仅在所有数据集中实现了最高的平均AUC，而且还显示出最小的标准差,并且与基准实验（表\ref{table4: CAMELYON}、\ref{table4: NSCLC}、\ref{table4: BRCA}和表\ref{table4: BRACS_7}）中的正常输入的实验结果相差无几。
 这强调了本章的方法在指导Mamba模型学习扫描序列的更多不变特征方面的有效性，优于其他Mamba变体方法。
 
-为了进一步验证本章方法的扫描不变性，本章重复了验证过程，将随机化的数量增加到100，并进行了双样本t检验，如图~\ref{figure4: scan-invariant}所示。结果显示，本章的方法不仅在平均值方面优于其他Mamba方法，而且p值远低于0.05。这表明，在统计意义上，其他Mamba方法与本章方法具有显著的差异。
+为了进一步验证本章方法的扫描不变性，本章重复了验证过程，将随机化的数量增加到100，并进行了双样本t检验，如图\ref{figure4: scan-invariant}所示。结果显示，本章的方法不仅在平均值方面优于其他Mamba方法，而且p值远低于0.05。这表明，在统计意义上，其他Mamba方法与本章方法具有显著的差异。
 
 \textbf{（3）不同Mamba模型性能比对}
 
@@ -914,7 +915,7 @@ SRMamba  & 89.99$\pm$0.46& 94.73$\pm$0.62 &91.99$\pm$1.78& 77.27$\pm$0.31\\
   \label{figure4: maskratio}
 \end{figure}
 
-图~\ref{figure4: maskratio}讨论了超参数序列掩码率$\beta\%$的影响。本小节与前一小节一致，同样在次级轴上绘制了BRACS-7$^\star$结果。
+图\ref{figure4: maskratio}讨论了超参数序列掩码率$\beta\%$的影响。本小节与前一小节一致，同样在次级轴上绘制了BRACS-7$^\star$结果。
 所有数据集在$10\%$的序列掩码率下达到最佳性能。因此，除非另有说明，否则本章默认设置$\beta\% = 10\%$。
 
 \textbf{（8）Bootstrap检验}
@@ -926,7 +927,7 @@ SRMamba  & 89.99$\pm$0.46& 94.73$\pm$0.62 &91.99$\pm$1.78& 77.27$\pm$0.31\\
   \bicaption[与SOTA方法性能比较的Bootstrap检验]{与SOTA方法性能比较的Bootstrap检验。}[Bootstrap test for performance comparison with SOTA method]{Bootstrap test for performance comparison with SOTA method.}
   \label{figure4: sota t-test}
 \end{figure}
-本小节对本章方法和SOTA方法进行了有放回的随机抽样Bootstrap检验，共采样100次，得到的结果如图~\ref{figure4: sota t-test}所示。可以看出，本章的方法显著高于SOTA，因为p值远小于0.05。
+本小节对本章方法和SOTA方法进行了有放回的随机抽样Bootstrap检验，共采样100次，得到的结果如图\ref{figure4: sota t-test}所示。可以看出，本章的方法显著高于SOTA，因为p值远小于0.05。
 
 \textbf{（9）两种推理方式的性能对比}
 
@@ -947,7 +948,7 @@ SRMamba  & 89.99$\pm$0.46& 94.73$\pm$0.62 &91.99$\pm$1.78& 77.27$\pm$0.31\\
   % \vspace{-25pt}
   \label{table4: Different inference}
 \end{table}
-本小节讨论了使用不同推理方式对性能结果的影响，结果报告在表~\ref{table4: Different inference}中。
+本小节讨论了使用不同推理方式对性能结果的影响，结果报告在表\ref{table4: Different inference}中。
 可以看出两者并没有明显的差异，这更证明本章所提出模型的泛化性能。
 默认设置下，本文采用有序列增强模块的推理模式进行推理。
 
@@ -961,10 +962,10 @@ SRMamba  & 89.99$\pm$0.46& 94.73$\pm$0.62 &91.99$\pm$1.78& 77.27$\pm$0.31\\
   \begin{tabularx}{\textwidth}{clCCC}
     \toprule
     &方法  & Accuracy& AUC&F1-score\\ \midrule
-    \multirow{6}{*}{\rotatebox{90}{PLIP}}&AB-MIL  & 90.09$\pm$1.63 & \underline{94.55$\pm$1.91} & 86.48$\pm$2.50\\
+    \multirow{6}{*}{\rotatebox{90}{PLIP}}&AB-MIL  & 90.09$\pm$1.63 & {94.55$\pm$1.91} & 86.48$\pm$2.50\\
     &OriginMamba        & 90.87$\pm$1.52 & 94.44$\pm$2.19 & 87.78$\pm$1.89\\
     &BiMamba          & 90.54$\pm$1.89 & 94.20$\pm$1.99 & 86.82$\pm$2.77\\
-    &SRMamba & \underline{91.87$\pm$0.85} & 94.20$\pm$2.16 & \underline{88.37$\pm$1.31}\\
+    &SRMamba & {91.87$\pm$0.85} & 94.20$\pm$2.16 & {88.37$\pm$1.31}\\
     &%\textbf{M$^2$S-MIL}
     第三章方法 & \underline{92.21$\pm$0.60} & \underline{95.24$\pm$1.85} & \underline{89.46$\pm$0.93}\\  
     &\textbf{SMC-MIL}        & \textbf{92.50$\pm$0.87} & \textbf{95.79$\pm$1.31} & \textbf{89.99$\pm$0.43}\\  
@@ -993,7 +994,7 @@ SRMamba  & 89.99$\pm$0.46& 94.73$\pm$0.62 &91.99$\pm$1.78& 77.27$\pm$0.31\\
 
     \bottomrule
 \end{tabularx}
-\vspace{-25pt}
+%\vspace{-25pt}
 
   \label{table4: NSCLC_PLIP}
 \end{table}
@@ -1054,8 +1055,32 @@ SRMamba  & 89.99$\pm$0.46& 94.73$\pm$0.62 &91.99$\pm$1.78& 77.27$\pm$0.31\\
 
 \textbf{（11）Mamba效率优势的验证分析}
 
+\begin{table}[h!]
+  \large    % 设置表格字体为5号
+  \setstretch{1.245}        % 设置具有指定弹力的橡皮长度（原行宽的1.2倍）
+  \captionsetup{font={small, stretch=1.512}}
+  \centering
+  \vspace{-10pt}
+  \bicaption[不同架构的性能与效率对比]{不同架构的性能与效率对比。}{Performance and efficiency comparison of different architectures.}    % 中英文标题
+  \begin{tabularx}{\textwidth}{clCCC}
+    \toprule
+    &方法  & AUC（\%）& 训练时间（H） & 显存（G）\\ \midrule
+    \multirow{6}{*}{\rotatebox{90}{CAMELYON}}&AB-MIL~\cite{ilse2018attention}  & 91.18$\pm$1.60 & \textbf{4.8} & \textbf{2.5}\\
+    &Nystormer~\cite{xiong2021nystromformer}       & 91.23$\pm$1.82 & 10 & 15\\
+    &ViT~\cite{dosovitskiy2020image} & - & - & OOM \\
+    &Mamba~\cite{gu2023mamba}        & 91.57$\pm$1.37 & 5.5 & 6\\
+    
+    &SRMamba~\cite{yang2024mambamil}        & 91.82$\pm$0.93 & 6.8 & 7 \\
+    &\textbf{SMC-MIL}        & \textbf{93.81$\pm$1.65} & 6 & 6.5 \\  
+    \bottomrule
+  \end{tabularx}
+ \vspace{-10pt}
+  \label{table4: efficiency}
+\end{table}
 
-为了说明
+为了充分验证Mamba架构相较于其他架构的优势，本章在相同设置下分别用单张GeForce RTX 3090测试了各架构在CAMELYON数据集上的实验所用训练时间、显存占用大小，并连同AUC报告在表\ref{table4: efficiency}。
+其中Nystormer~\cite{xiong2021nystromformer}是一种经典的线性注意力变体，而OOM表示超出显存限制无法运行。由表\ref{table4: efficiency}可以看出，Mamba在病理图像分类领域不仅性能上有显著提升，而且在训练时间和显存占用上也具有很大优势。
+这些结果也充分验证了本章所提出的方法在轻量化上的巨大优势。
 
 
 

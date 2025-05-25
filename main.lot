@@ -16,7 +16,7 @@
 \contentsline {table}{\numberline {3.7}{\ignorespaces M$^2$S-MIL在以R50为特征提取器的三个主要数据集上的生存预测结果（\%）}}{28}{table.3.7}%
 \contentsline {table}{\numberline {3.8}{\ignorespaces M$^2$S-MIL在以UNI为特征提取器的三个主要数据集上的生存预测结果（\%）}}{29}{table.3.8}%
 \contentsline {table}{\numberline {3.9}{\ignorespaces 在三个主要数据集上，不同组件对性能的影响}}{30}{table.caption.18}%
-\contentsline {table}{\numberline {3.10}{\ignorespaces 不同大小窗口对性能影响}}{31}{table.caption.21}%
+\contentsline {table}{\numberline {3.10}{\ignorespaces 不同大小窗口对性能影响}}{32}{table.caption.21}%
 \contentsline {table}{\numberline {3.11}{\ignorespaces M$^2$S-MIL以PLIP为离线特征提取器的亚型分型性能}}{32}{table.caption.22}%
 \contentsline {table}{\numberline {3.12}{\ignorespaces M$^2$S-MIL以PLIP为离线特征提取器在TCGA-NSCLC上的亚型分型性能}}{32}{table.caption.23}%
 \contentsline {table}{\numberline {3.13}{\ignorespaces M$^2$S-MIL以PLIP为离线特征提取器在TCGA-BRCA上的亚型分型性能}}{33}{table.caption.24}%
@@ -39,6 +39,7 @@
 \contentsline {table}{\numberline {4.15}{\ignorespaces SMC-MIL以PLIP为离线特征提取器的癌症诊断性能}}{54}{table.caption.40}%
 \contentsline {table}{\numberline {4.16}{\ignorespaces SMC-MIL以PLIP为离线特征提取器在TCGA-NSCLC上的亚型分型性能}}{54}{table.caption.41}%
 \contentsline {table}{\numberline {4.17}{\ignorespaces SMC-MIL以PLIP为离线特征提取器在TCGA-BRCA上的亚型分型性能}}{55}{table.caption.42}%
+\contentsline {table}{\numberline {4.18}{\ignorespaces 不同架构的性能与效率对比}}{55}{table.caption.45}%
 \addvspace {10\p@ }
 \vspace {-10pt}
 \addvspace {10\p@ }

@@ -14,7 +14,7 @@
 \vspace {-10pt}
 \contentsline {figure}{\numberline {3.1}{\ignorespaces 常规扫描、网格扫描和区域螺旋扫描示意图}}{17}{figure.caption.14}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces 基于多扫描Mamba的多实例学习架构示意图}}{19}{figure.caption.15}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces 不同Mamba模型的性能比对柱状图}}{30}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces 不同Mamba模型的性能比对柱状图}}{31}{figure.caption.19}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces 不同区域数量的模型性能折线图}}{31}{figure.caption.20}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces 原始Mamba(baseline)和M$^2$S-MILL聚合特征t-SNE可视化结果}}{33}{figure.caption.25}%
 \contentsline {figure}{\numberline {3.6}{\ignorespaces 多个Mamba变体和M$^2$S-MIL关注的图块可视化结果}}{34}{figure.caption.26}%
