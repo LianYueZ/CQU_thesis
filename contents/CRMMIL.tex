@@ -16,7 +16,7 @@
 因而单个序列扫描模式的Mamba模型的性能会受其空间关系建模的限制。
 
 为了缓解上述所提到的问题，业内主流的解决方案是将多个扫描模式序列的信息进行整合。
-然而，如图\ref{figure3: 扫描示意图}左图所示，大多数方法虽然通过类似横向和竖向的扫描模式缓解了Mamba序列敏感特性和视觉任务的差异，但是依旧只是在一维序列中进行，并没有充分利用视觉任务的特性如局部连续性、旋转不变性等，
+然而，如图\ref{figure3: 扫描示意图}(a)所示，大多数方法虽然通过类似横向和竖向的扫描模式缓解了Mamba序列敏感特性和视觉任务的差异，但是依旧只是在一维序列中进行，并没有充分利用视觉任务的特性如局部连续性、旋转不变性等，
 更没有关注到空间信息的捕获。为此，本章从引入局部连续性、旋转不变性的视觉特性出发，提供了两种新的扫描模式，综合多个扫描模式分支以建模出更全面特征。
 此外，本章还通过进一步综合局部空间信息，来提高模型对视觉任务的适配。
 
@@ -99,7 +99,7 @@ Mamba进一步将选择机制集成到S4模型中，通过高效的硬件感知�
   \label{figure3: 多扫描Mamba}
   \end{figure}
 
-为了解决~\ref{section3: 研究动机}小节中的问题，如图~\ref{figure3: 多扫描Mamba}所示，本章提出了一种基于空间信息增强的多扫描Mamba模型，该模型既发挥了Mamba长序列建模能力强的特点，同时也缓解其和视觉2D图像任务间的差异。
+为了解决第\ref{section3: 研究动机}小节中的问题，如图\ref{figure3: 多扫描Mamba}所示，本章提出了一种基于空间信息增强的多扫描Mamba模型，该模型既发挥了Mamba长序列建模能力强的特点，同时也缓解其和视觉2D图像任务间的差异。
 具体而言，本研究通过添加区域螺旋扫描和网格扫描等多种扫描模式分支，引入局部连续性、旋转不变性等的2D图像特性。
 此外，为了进一步整合2D空间关系信息，本章引入一个2D空间上下文感知模块。总的来说，本研究的贡献如下：
 \begin{itemize}
@@ -125,12 +125,12 @@ Mamba进一步将选择机制集成到S4模型中，通过高效的硬件感知�
 
 为了使Mamba能充分学习到实例间的相互依赖，并缓解其本身因果建模倾向所带来的负面影响，
 本章方法提出使用多种扫描模式，以消除单一扫描序列所建模出的偏执，捕获实例间更全面的特征信息。
-如图~\ref{figure3: 多扫描Mamba}所示，在多扫描Mamba模块中可分为四个扫描分支：原始扫描序列分支、反向扫描序列分支、区域螺旋扫描分支和网格扫描分支。
+如图\ref{figure3: 多扫描Mamba}所示，在多扫描Mamba模块中可分为四个扫描分支：原始扫描序列分支、反向扫描序列分支、区域螺旋扫描分支和网格扫描分支。
 首先，原始扫描模式序列被输入Mamba模型以提供常规特征：
 \begin{equation}
   Z'_{origin}=\Psi_{origin} (Z_{origin}),
 \end{equation}
-其中，$\Psi_{origin}(\cdot)$同~\ref{section3: 问题描述和符号定义}小节所示为Mamba模型。 反向扫描序列以初步缓解Mamba不过分学习到正向序列的特有顺序偏执：
+其中，$\Psi_{origin}(\cdot)$同\ref{section3: 问题描述和符号定义}小节所示为Mamba模型。 反向扫描序列以初步缓解Mamba不过分学习到正向序列的特有顺序偏执：
 \begin{equation}
   Z'_{flip}=\Psi_{flip} (Z_{flip})=\Psi_{flip} (\{z_i\}_{i=N}^1).
 \end{equation}
@@ -142,7 +142,7 @@ Mamba进一步将选择机制集成到S4模型中，通过高效的硬件感知�
 
 具体而言，输入的实例特征序列首先被重塑为2D特征图，初始的二维特征图形式为$H\in \mathbb{R} ^{N\times D}$，
 之后转变为$ H \in \mathbb{R} ^{\lceil\sqrt{N}\rceil \times \lceil\sqrt{N}\rceil \times D}$。
-重塑后便可如图~\ref{figure3: 扫描示意图}所示的网格扫描方式。网格子序列1可表示为：
+重塑后便可如图\ref{figure3: 扫描示意图}所示的网格扫描方式。网格子序列1可表示为：
 \begin{equation}
   %Z_{grid1}=\{z_{ij},i=2k+1,k<=\lfloor \lceil\sqrt{N}\rceil/2\rfloor , k \in \mathbb{N}_0;j=2m+1,m<=\lfloor \lceil\sqrt{N}\rceil/2\rfloor,m \in \mathbb{N}_0.\}
   Z_{\text{grid1}} = \left\{ z_{ij} \,\big|\, 
@@ -180,7 +180,7 @@ k, m \leq \left\lfloor \frac{\lceil \sqrt{N} \rceil}{2} \right\rfloor
 \end{equation}
 网格扫描模式在同一序列中综合多方向信息，以缓解单一扫描模式序列所带来的顺序偏向。
 
-同时，如图~\ref{figure3: 扫描示意图}所示,特征图$H$被均匀划分为$L\times L$个非重叠式区域，以便于进行区域螺旋扫描。每个区域由 $M\times M$ 个实例构成，
+同时，如图\ref{figure3: 扫描示意图}所示,特征图$H$被均匀划分为$L\times L$个非重叠式区域，以便于进行区域螺旋扫描。每个区域由 $M\times M$ 个实例构成，
 并且满足关系：$L \times M=\left\lceil\sqrt{N}\right\rceil$。此外，为确保区域数量为$(L,L)$时能整除特征图大小，本章将对特征图进行零填充操作。
 因此 特征图 $H$ 被划分为 ${\{H^l\}}^{L^2}_{l=1},H \in \mathbb{R} ^{M\times M\times D}$。
 本章在划分后的区域内分别进行区域螺旋扫描，
@@ -202,7 +202,7 @@ k, m \leq \left\lfloor \frac{\lceil \sqrt{N} \rceil}{2} \right\rfloor
 \subsection[\hspace{-2pt}2D空间上下文感知模块]{{\heiti\zihao{4} \hspace{-8pt}2D空间上下文感知模块}}\label{section3: 2D空间上下文感知模块}
 
 为了进一步提升模型捕获空间信息的能力，本章将综合多种扫描信息的序列特征输入到基于分块局部注意力的2D空间上下文感知模块中。
-如图~\ref{figure3: 多扫描Mamba}所示，本章将输出的1D特征序列再次重塑为2D特征图($H'\in \mathbb{R} ^{\left\lceil\sqrt{N}\right\rceil\times\left\lceil\sqrt{N}\right\rceil\times D}$)，
+如图\ref{figure3: 多扫描Mamba}所示，本章将输出的1D特征序列再次重塑为2D特征图($H'\in \mathbb{R} ^{\left\lceil\sqrt{N}\right\rceil\times\left\lceil\sqrt{N}\right\rceil\times D}$)，
 然后将特征划分为固定大小($M' \times M'$)的局部窗口（不同于上一小节的区域），每窗口内计算局部注意力。
 并通过$1 \times 1$卷积还原原本的分辨率，避免信息损失。记某一个窗口内的输入特征为$H'_{win}$，则窗口内特征图可表示为：
 \begin{equation}
@@ -245,7 +245,7 @@ k, m \leq \left\lfloor \frac{\lceil \sqrt{N} \rceil}{2} \right\rfloor
   \hat{Y}\gets\mathcal{C}\left(\mathbf{b}\right):= \mathcal{C}(\mathcal{A}(Z_{output})).
 \end{equation}
 
-本章内容仅使用常规的分类损失。包级分类预测的损失值通过交叉熵损失函数计算，其数学定义如式~\ref{loss1}所示：
+本章内容仅使用常规的分类损失。包级分类预测的损失值通过交叉熵损失函数计算，其数学定义如式\ref{loss1}所示：
 \begin{equation}
   \mathcal{L}_{cls}=Y \log\hat{Y}+(1-Y)\log(1-\hat{Y}),
   \label{loss1}
@@ -272,7 +272,7 @@ k, m \leq \left\lfloor \frac{\lceil \sqrt{N} \rceil}{2} \right\rfloor
 \textbf{（1）实验环境}
 
 本章节的实验工作基于实验室高性能计算平台完成，该平台搭载AMD Ryzen 5700X 20 核中央处理器与 3 块 NVIDIA RTX 3090 图形处理器。
-实验框架基于 Python 编程语言构建，采用 OpenSlide 库实现病理图像的高效读取，基于 Matplotlib 库完成数据可视化。详细的实验环境参数配置见表~\ref{table3: env}：
+实验框架基于 Python 编程语言构建，采用 OpenSlide 库实现病理图像的高效读取，基于 Matplotlib 库完成数据可视化。详细的实验环境参数配置见表\ref{table3: env}：
 
 \begin{table}[h!]
   \small    % 设置表格字体为5号
@@ -372,7 +372,7 @@ k, m \leq \left\lfloor \frac{\lceil \sqrt{N} \rceil}{2} \right\rfloor
   \textbf{M$^2$S-MIL(Ours)}& \textbf{89.76$\pm$1.33}& \textbf{93.02$\pm$1.20}& \textbf{85.48$\pm$2.43}\\
 
 \end{xltabular}}
-表~\ref{table3: CAMELYON}给出了各种MIL方法在CAMELYON上的癌症诊断性能。
+表\ref{table3: CAMELYON}给出了各种MIL方法在CAMELYON上的癌症诊断性能。
 这些结果表明，本章的方法在所有基准测试的所有指标下都实现了最佳性能。
 具体来说，在CAMELYON数据集上，本章的方法在Accuracy、AUC和F1-score方面分别比次优的方法提高了0.34\%、0.47\%和0.28\%。
 同样值得注意的是，与同样基于Mamba架构的SRMamba相比，所提出的M$^2$S-MIL的性能得到了显着提高。
@@ -422,8 +422,8 @@ M$^2$S-MIL在Accuracy、AUC和F1-score方面分别比SRMamba高0.78\%,1.2\%和1.
 
 \end{xltabular}}
 
-表~\ref{table3: NSCLC}给出了各种MIL方法在TCGA-NSCLC上的癌症分型性能。
-这些结果同样如图~\ref{table3: CAMELYON}，本章的方法在所有基准测试的所有指标下都实现了最佳性能。
+表\ref{table3: NSCLC}给出了各种MIL方法在TCGA-NSCLC上的癌症分型性能。
+这些结果同样如图\ref{table3: CAMELYON}，本章的方法在所有基准测试的所有指标下都实现了最佳性能。
 具体来说，在TCGA-NSCLC数据集上，本章的方法在Accuracy、AUC和F1-score方面分别比SOTA的方法提高了0.3\%、0.45\%和0.28\%。
 与同样基于Mamba架构的SRMamba相比，所提出的M$^2$S-MIL的性能提升分别为1.05\%、1.58\%和1.01\%。
 这验证了本章所提出模型的有效性。
@@ -475,8 +475,8 @@ M$^2$S-MIL在Accuracy、AUC和F1-score方面分别比SRMamba高0.78\%,1.2\%和1.
 \end{xltabular}}
 
 
-表~\ref{table3: BRCA}报告了BRCA数据集上的亚型分类性能比较。
-观察结果与表格~\ref{table3: CAMELYON},表~\ref{table3: NSCLC}所示一致。
+表\ref{table3: BRCA}报告了BRCA数据集上的亚型分类性能比较。
+观察结果与表格\ref{table3: CAMELYON},表\ref{table3: NSCLC}所示一致。
 本章的模型在所有指标上都达到了最先进的性能。
 与次优方法相比，该方法在BRCA数据集上的Accuracy、AUC和F1-score分别提高了0.73\%、0.19\%和1.01\%。
 在与非Mamba模型相比，AUC增加了0.92\%，这体现了Mamba性能的强大建模能力。
@@ -527,7 +527,7 @@ M$^2$S-MIL在Accuracy、AUC和F1-score方面分别比SRMamba高0.78\%,1.2\%和1.
 
 
 
-表~\ref{table3: BRACS3}展示了BRACS数据集上依照官方划分的粗粒度亚型分类性能。
+表\ref{table3: BRACS3}展示了BRACS数据集上依照官方划分的粗粒度亚型分类性能。
 结果表明，与基线相比，本章的方法仍然具有优势。
 例如，本章的方法在这任务上分别将次优的方法中的Accuracy和AUC提高了1.0\%和0.25\%，对比SRMamba，AUC更是提高了2.09\%。
 这些结果都清楚地表明，本章的方法的显著性能改进并不仅仅归功于Mamba本身强大的建模能力，
@@ -546,13 +546,15 @@ M$^2$S-MIL在Accuracy、AUC和F1-score方面分别比SRMamba高0.78\%,1.2\%和1.
     \multirow{3}{*}{\rotatebox{90}{UNI}}&
     ABMIL~\cite{ilse2018attention} &  99.36$\pm$0.40 & 98.24$\pm$0.59 & 95.62$\pm$1.84   \\
     &Mamba ~\cite{gu2023mamba} & 99.44$\pm$0.47 & 98.45$\pm$0.53 & 96.18$\pm$1.37  \\
-    &\textbf{M$^2$S-MIL}  &  \textbf{99.51$\pm$0.22} & \textbf{98.55$\pm$0.56} & \textbf{96.54$\pm$1.58}  \\    \bottomrule
+    &\textbf{M$^2$S-MIL}  &  \textbf{99.59$\pm$0.22} & \textbf{98.55$\pm$0.56} & \textbf{96.54$\pm$1.58}  \\    \bottomrule
   \end{tabularx}
   % \vspace{-25pt}
   \label{table3: UNI}
 \end{table}
 
-由于使用UNI特征提取器进行诊断和分型任务的基线方法表现出足够强的性能，使得进一步的比较没有意义（见表\ref{table3: UNI}），因此本文仅关注UNI特征在生存预测的影响。
+表\ref{table3: UNI}报告了以UNI为离线特征提取器的癌症诊断和分型性能的主要指标AUC（\%）。
+由于使用UNI特征提取器进行诊断和分型任务的基线方法表现出足够强的性能，使得进一步在该部分实验上的性能比较（即本章方法相较于基线方法的性能提升）有所降低，但仍存在一定提升。其AUC分别提升了0.15\%，0.1\%，0.36\%。
+这些结果清楚的表明，本章所提出方法不仅在传统R50特征上表现出很高的性能提升，而且作用在高质量的特征基线上也依旧有所提升，更加充分验证本章方法的有效性和普适性。
 
 \textbf{（2）生存预测}
 
@@ -648,7 +650,7 @@ M$^2$S-MIL在Accuracy、AUC和F1-score方面分别比SRMamba高0.78\%,1.2\%和1.
 \end{xltabular}}
 
 
-表~\ref{table3: Survival_r50}和表~\ref{table3: Survival_uni}分别给出了三个生存预测数据集以R50提取特征和以UNI提取特征的实验结果。
+表\ref{table3: Survival_r50}和表\ref{table3: Survival_uni}分别给出了三个生存预测数据集以R50提取特征和以UNI提取特征的实验结果。
 本章提出的M$^2$S-MIL模型表现出很强的性能，在BLCA数据集上的C-index得分为61.96\%，在LUAD上的得分为63.88\%，在LUSC上的得分为61.22\%。
 其明显优于比较的方法，在每个数据集上分别比次优方法提高了0.98\%，0.68\%和0.31\%。此外，
 即使在利用基础模型提取的高质量特征时，M$^2$S-MIL也会产生较好的效果，同样达到SOTA的性能效果。
@@ -724,7 +726,7 @@ M$^2$S-MIL在Accuracy、AUC和F1-score方面分别比SRMamba高0.78\%,1.2\%和1.
   \label{figure3: NumOfRegion}
 \end{figure}
 
-本小节系统地研究了不同区域划分策略在本章的方法中的影响。图~\ref{figure3: NumOfRegion}展示了不同区域划分在病理分类任务上的性能效果，其中1-D代表并不将之重塑为2D特征图而只进行一维序列的分区。
+本小节系统地研究了不同区域划分策略在本章的方法中的影响。图\ref{figure3: NumOfRegion}展示了不同区域划分在病理分类任务上的性能效果，其中1-D代表并不将之重塑为2D特征图而只进行一维序列的分区。
 从与1D的对比实验可以看出，二维区域划分方式优于一维区域划分方式，因为它保留了更多的原始图像的空间信息。
 并且本章认为，本章的性能提升并不仅仅依赖于对序列简单的划分区域，侧面印证了本章方法，通过引入更多空间信息从而提高了模型性能。
 此外，另一个现象是，使用过小或过大的区域会使性能下降。这是因为小区域大幅降低了Mamba建模二维关系的能力（近似正常原始序列输入），而过大的区域将原本相距较远不具备连续性的特征关联在一起导致性能损耗。

@@ -25,45 +25,45 @@ Database file #1: ref/refs.bib
 Warning--empty year in JSGG20240822004
 Warning--empty year in JSGG20240822004
 Warning--empty year in JSGG20240822004
-You've used 74 entries,
+You've used 75 entries,
             5375 wiz_defined-function locations,
-            1521 strings with 24728 characters,
-and the built_in function-call counts, 707595 in all, are:
-= -- 13854
-> -- 82324
-< -- 103783
-+ -- 29346
-- -- 5748
-* -- 4022
-:= -- 98320
-add.period$ -- 226
-call.type$ -- 74
-change.case$ -- 176
-chr.to.int$ -- 25884
-cite$ -- 77
-duplicate$ -- 1854
-empty$ -- 5598
-format.name$ -- 2680
-if$ -- 183509
+            1527 strings with 25028 characters,
+and the built_in function-call counts, 720068 in all, are:
+= -- 14069
+> -- 83814
+< -- 105639
++ -- 29852
+- -- 5843
+* -- 4090
+:= -- 100024
+add.period$ -- 229
+call.type$ -- 75
+change.case$ -- 178
+chr.to.int$ -- 26350
+cite$ -- 78
+duplicate$ -- 1892
+empty$ -- 5685
+format.name$ -- 2723
+if$ -- 186748
 int.to.chr$ -- 1
-int.to.str$ -- 75
+int.to.str$ -- 76
 missing$ -- 0
-newline$ -- 419
-num.names$ -- 222
-pop$ -- 36275
+newline$ -- 425
+num.names$ -- 225
+pop$ -- 36962
 preamble$ -- 1
-purify$ -- 113
+purify$ -- 114
 quote$ -- 0
-skip$ -- 73475
+skip$ -- 74760
 stack$ -- 0
-substring$ -- 33784
-swap$ -- 74
-text.length$ -- 1864
+substring$ -- 34369
+swap$ -- 77
+text.length$ -- 1896
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 810
+type$ -- 821
 warning$ -- 3
-while$ -- 1989
+while$ -- 2021
 width$ -- 0
-write$ -- 1015
+write$ -- 1028
 (There were 3 warnings)

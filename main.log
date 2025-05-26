@@ -1,10 +1,14 @@
+<<<<<<< HEAD
 This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.17)  26 MAY 2025 11:23
+=======
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.16)  25 MAY 2025 23:49
+>>>>>>> 794b9939a47899860d1eb2e72afb32d939f6ad87
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/Lian_Yue/Documents/GitHub/CQU_thesis/main
-(c:/Users/Lian_Yue/Documents/GitHub/CQU_thesis/main.tex
+**d:/GitHub/CQU_thesis/main
+(d:/GitHub/CQU_thesis/main.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (./cquthesis.cls
@@ -1735,11 +1739,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 
-] (./main.lot)
-\tf@lot=\write8
-\openout8 = `main.lot'.
-
-
+] (./main.lot
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.64723pt, for example:
@@ -1753,7 +1753,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 
-]
+])
+\tf@lot=\write8
+\openout8 = `main.lot'.
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.64723pt, for example:
@@ -2187,8 +2191,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.64723pt}.
 
 [26]
-Overfull \hbox (8.68367pt too wide) in paragraph at lines 478--488
-[]\TU/simsun.ttf(0)/m/n/12.045 表 []\TU/TeXGyreTermesX(0)/m/n/12.045 3.4[]\TU/simsun.ttf(0)/m/n/12.045 报 告 了 \TU/TeXGyreTermesX(0)/m/n/12.045 BRCA \TU/simsun.ttf(0)/m/n/12.045 数 据 集 上 的 亚 型 分 类 性 能 比 较。|  观 察 结 果 与 表 格 []\TU/TeXGyreTermesX(0)/m/n/12.045 3.2[], \TU/simsun.ttf(0)/m/n/12.045 表 []\TU/TeXGyreTermesX(0)/m/n/12.045 3.3[]\TU/simsun.ttf(0)/m/n/12.045 所
+Overfull \hbox (2.66115pt too wide) in paragraph at lines 478--488
+[]\TU/simsun.ttf(0)/m/n/12.045 表[]\TU/TeXGyreTermesX(0)/m/n/12.045 3.4[]\TU/simsun.ttf(0)/m/n/12.045 报 告 了 \TU/TeXGyreTermesX(0)/m/n/12.045 BRCA \TU/simsun.ttf(0)/m/n/12.045 数 据 集 上 的 亚 型 分 类 性 能 比 较。|  观 察 结 果 与 表 格[]\TU/TeXGyreTermesX(0)/m/n/12.045 3.2[], \TU/simsun.ttf(0)/m/n/12.045 表[]\TU/TeXGyreTermesX(0)/m/n/12.045 3.3[]\TU/simsun.ttf(0)/m/n/12.045 所
  []
 
 
@@ -2199,6 +2203,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.64723pt}.
 
 [27]
+Overfull \hbox (1.7436pt too wide) in paragraph at lines 555--558
+[]\TU/simsun.ttf(0)/m/n/12.045 表[]\TU/TeXGyreTermesX(0)/m/n/12.045 3.6[]\TU/simsun.ttf(0)/m/n/12.045 报 告 了 以 \TU/TeXGyreTermesX(0)/m/n/12.045 UNI \TU/simsun.ttf(0)/m/n/12.045 为 离 线 特 征 提 取 器 的 癌 症 诊 断 和 分 型 性 能 的 主 要 指 标 \TU/TeXGyreTermesX(0)/m/n/12.045 AUC
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.64723pt, for example:
@@ -2209,13 +2217,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [28]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 659.
+(hyperref)                removing `\@ifnextchar' on input line 661.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (4.90828pt too wide) in paragraph at lines 686--689
+Overfull \hbox (4.90828pt too wide) in paragraph at lines 688--691
 []\TU/simsun.ttf(0)/m/n/12.045 为 了 研 究 \TU/TeXGyreTermesX(0)/m/n/12.045 M$[]$S-MIL \TU/simsun.ttf(0)/m/n/12.045 模 型 中 每 个 模 块 对 模 型 的 影 响，|  本 文 在 \TU/TeXGyreTermesX(0)/m/n/12.045 CAMELYON\TU/simsun.ttf(0)/m/n/12.045 、| \TU/TeXGyreTermesX(0)/m/n/12.045 TCGA-
  []
 
@@ -2229,6 +2237,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [29]
 File: figures/MMSMIL的不同Mamba比较.pdf Graphic file (type pdf)
 <use figures/MMSMIL的不同Mamba比较.pdf>
+File: figures/区域个数.png Graphic file (type bmp)
+<figures/区域个数.png>
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2238,8 +2248,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.64723pt}.
 
 [30]
-File: figures/区域个数.png Graphic file (type bmp)
-<figures/区域个数.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2265,7 +2275,7 @@ File: figures/vis2_2.pdf Graphic file (type pdf)
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 844.
+(hyperref)                removing `\@ifnextchar' on input line 846.
 
 File: figures/vis2.pdf Graphic file (type pdf)
 <use figures/vis2.pdf>
@@ -2282,7 +2292,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [33]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 861.
+(hyperref)                removing `\@ifnextchar' on input line 863.
 
 )
 
@@ -2479,11 +2489,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.64723pt}.
 
 [46]
-Overfull \hbox (1.65741pt too wide) in paragraph at lines 627--632
-[]\TU/simsun.ttf(0)/m/n/12.045 表[]\TU/TeXGyreTermesX(0)/m/n/12.045 4.4[]\TU/simsun.ttf(0)/m/n/12.045 报 告 了 \TU/TeXGyreTermesX(0)/m/n/12.045 BRCA \TU/simsun.ttf(0)/m/n/12.045 数 据 集 上 的 亚 型 分 类 性 能 比 较。|  观 察 结 果 与 表 格 []\TU/TeXGyreTermesX(0)/m/n/12.045 4.2[]\TU/simsun.ttf(0)/m/n/12.045 和 []\TU/TeXGyreTermesX(0)/m/n/12.045 4.3[]\TU/simsun.ttf(0)/m/n/12.045 所
- []
-
-
 Overfull \hbox (1.96948pt too wide) in paragraph at lines 627--632
 \TU/simsun.ttf(0)/m/n/12.045 在 与 \TU/TeXGyreTermesX(0)/m/n/12.045 SRMamba \TU/simsun.ttf(0)/m/n/12.045 模 型 相 比，| \TU/TeXGyreTermesX(0)/m/n/12.045 Accuracy\TU/simsun.ttf(0)/m/n/12.045 、| \TU/TeXGyreTermesX(0)/m/n/12.045 AUC \TU/simsun.ttf(0)/m/n/12.045 和 \TU/TeXGyreTermesX(0)/m/n/12.045 F1-score \TU/simsun.ttf(0)/m/n/12.045 分 别 增 加 了 \TU/TeXGyreTermesX(0)/m/n/12.045 2.02%,0.67%,2.5%\TU/simsun.ttf(0)/m/n/12.045 。| 
  []
@@ -2498,10 +2503,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [47]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 746.
+(hyperref)                removing `\@ifnextchar' on input line 747.
 
 
-Overfull \hbox (7.43126pt too wide) in paragraph at lines 750--751
+Overfull \hbox (7.43126pt too wide) in paragraph at lines 751--752
 []\TU/simsun.ttf(0)/m/n/12.045 为 了 研 究 \TU/TeXGyreTermesX(0)/m/n/12.045 SMC-MIL \TU/simsun.ttf(0)/m/n/12.045 模 型 中 每 个 模 块 对 模 型 的 影 响，|  本 文 在 \TU/TeXGyreTermesX(0)/m/n/12.045 CAMELYON, TCGA-
  []
 
@@ -2546,7 +2551,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.64723pt}.
 
 [50]
-Overfull \hbox (3.30737pt too wide) in paragraph at lines 883--883
+Overfull \hbox (3.30737pt too wide) in paragraph at lines 884--884
  []|\TU/TeXGyreTermesX(0)/m/n/10.53937 CAMELYON| 
  []
 
@@ -2582,7 +2587,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.64723pt}.
 
 [52]
-Overfull \hbox (1.38306pt too wide) in paragraph at lines 946--946
+Overfull \hbox (1.38306pt too wide) in paragraph at lines 947--947
  []|\TU/TeXGyreTermesX(0)/m/n/10.53937 CAMELYON| 
  []
 
@@ -2626,13 +2631,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [54]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 1062.
+(hyperref)                removing `\@ifnextchar' on input line 1087.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 1074.
-
-)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.64723pt, for example:
@@ -2642,6 +2642,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [55]
 
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 1099.
+
+)
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.64723pt, for example:
 (fancyhdr)                \setlength{\headheight}{12.64723pt}.
@@ -2649,9 +2654,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.64723pt}.
 
 [56]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.64723pt, for example:
@@ -2869,15 +2871,15 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D6BEE9DB1CB511F819670C189286FB2B;8983.
+(rerunfilecheck)             Checksum: 012FD5553824510C62355F41D8952245;8983.
  ) 
 Here is how much of TeX's memory you used:
- 44735 strings out of 476719
- 988463 string characters out of 5801423
+ 44739 strings out of 476719
+ 988498 string characters out of 5801423
  1969842 words of memory out of 5000000
- 65821 multiletter control sequences out of 15000+600000
+ 65825 multiletter control sequences out of 15000+600000
  585204 words of font info for 215 fonts, out of 8000000 for 9000
  37 hyphenation exceptions out of 8191
- 107i,17n,131p,1246b,1207s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 107i,17n,131p,1221b,1207s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on main.pdf (78 pages).
