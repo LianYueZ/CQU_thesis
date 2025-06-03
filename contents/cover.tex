@@ -56,7 +56,7 @@
 为攻克这一挑战，实现Mamba架构在病理图像领域的高效适配，本研究从多扫描Mamba和扫描不变性Mamba两个关键视角展开深入探索。
 
 （1）针对Mamba一维序列建模所造成图像空间结构捕获能力不足的问题，
-本研究提出基于空间信息增强的多扫描Mamba多实例学习框架（M$^2$S-MIL）。
+本研究提出基于空间信息增强的多扫描Mamba多实例学习框架。
 该框架创新性地设计了多个扫描模式分支作为Mamba的输入，提出了区域螺旋扫描和网格扫描等新型扫描模式，
 显著提升Mamba对局部连续性、旋转不变性及同一序列不同方向空间关联信息的捕获能力。
 同时，通过设计基于分块局部注意力的2D空间上下文感知模块，进一步强化序列对2D空间上下文的感知能力，
@@ -65,7 +65,7 @@
 能够切实解决Mamba一维实例序列空间建模不充分的问题，显著提高模型性能，同时在数字病理图像分类任务中一定程度缓解了使用Mamba模型出现的建模倾向差异难题。​
 
 （2）针对Mamba作为序列相关模型，与病理图像多实例学习的序列不变性存在冲突的问题，
-本研究提出基于对比学习策略的扫描不变Mamba多实例学习（SMC-MIL）框架。
+本研究提出基于对比学习策略的扫描不变Mamba多实例学习框架。
 通过设计双分支实例序列对比学习框架，来约束同一Mamba从不同扫描序列获得的包表示及分类结果保持一致，以引导Mamba学习与序列顺序无关的特征。
 同时引入基于实例评估的序列对比增强方法，来增加对比学习难度，迫使Mamba在输入序列差异极大的情况下，
 学习到对病理图像形成一致表示和决策的能力，成功赋予Mamba良好的序列不变建模和实例识别能力。
@@ -81,9 +81,9 @@ As the ``gold standard'' of disease diagnosis, medical image analysis is an impo
 In digital pathological image classification tasks, challenges arise from insufficient instance relationship modeling and high computational resource consumption due to the large number of instances. Recent studies demonstrate that the Mamba architecture, characterized by strong long-sequence modeling capabilities and linear computational complexity, is suitable for addressing these issues. However, limitations remain, including inadequate spatial modeling and conflicts with the sequence invariance requirements of multi-instance learning for pathological images.
 To address these challenges and enable efficient adaptation of the Mamba architecture in pathological image analysis, this study explores two key perspectives: multi-scan Mamba and scan-invariant Mamba.
 
-(1) To overcome the spatial modeling limitations of Mamba's one-dimensional sequence processing, we propose the Multi-scan Mamba with Spatial Enhancement (M²S-MIL) framework. This framework introduces innovative scanning modes (e.g., regional spiral scanning and grid scanning) as inputs to Mamba, enhancing its ability to capture local continuity, rotation invariance, and spatial correlations across different directions. Additionally, a 2D spatial context sensing module based on block-local attention is designed to reinforce 2D spatial relationship perception. This approach significantly improves Mamba's spatial modeling capabilities, effectively bridging the gap between Mamba's architecture and pathological image classification tasks. Extensive experiments validate that integrating multi-scan branches and spatial information alleviates Mamba's one-dimensional spatial limitations, enhances model performance, and mitigates discrepancies in modeling trends for digital pathological image classification.
+(1) To overcome the spatial modeling limitations of Mamba's one-dimensional sequence processing, we propose the Multi-scan Mamba with Spatial Enhancement framework. This framework introduces innovative scanning modes (e.g., regional spiral scanning and grid scanning) as inputs to Mamba, enhancing its ability to capture local continuity, rotation invariance, and spatial correlations across different directions. Additionally, a 2D spatial context sensing module based on block-local attention is designed to reinforce 2D spatial relationship perception. This approach significantly improves Mamba's spatial modeling capabilities, effectively bridging the gap between Mamba's architecture and pathological image classification tasks. Extensive experiments validate that integrating multi-scan branches and spatial information alleviates Mamba's one-dimensional spatial limitations, enhances model performance, and mitigates discrepancies in modeling trends for digital pathological image classification.
 
-(2) To resolve conflicts between Mamba's sequence-dependent processing and the sequence invariance requirements of multi-instance learning, we develop the Scan-invariant Mamba via Contrast Learning (SMC-MIL) framework. This framework employs a two-branch instance sequence contrast learning mechanism to constrain consistent bag representations and classification results across different scan sequences, guiding Mamba to learn order-agnostic features. A sequence contrast enhancement method based on instance evaluation is introduced to increase learning difficulty, forcing Mamba to develop consistent representations and decisions even for highly variant input sequences. Experimental results show that SMC-MIL maintains Mamba's computational efficiency while reducing its sensitivity to input sequence order. By focusing on instance disorder relationship modeling and discriminative feature mining, SMC-MIL better aligns with the requirements of pathological image classification tasks.
+(2) To resolve conflicts between Mamba's sequence-dependent processing and the sequence invariance requirements of multi-instance learning, we develop the Scan-invariant Mamba via Contrast Learning framework. This framework employs a two-branch instance sequence contrast learning mechanism to constrain consistent bag representations and classification results across different scan sequences, guiding Mamba to learn order-agnostic features. A sequence contrast enhancement method based on instance evaluation is introduced to increase learning difficulty, forcing Mamba to develop consistent representations and decisions even for highly variant input sequences. Experimental results show that SMC-MIL maintains Mamba's computational efficiency while reducing its sensitivity to input sequence order. By focusing on instance disorder relationship modeling and discriminative feature mining, SMC-MIL better aligns with the requirements of pathological image classification tasks.
 This study systematically addresses the limitations of Mamba in pathological image analysis through architectural innovations, providing a robust foundation for future advancements in medical image-assisted diagnosis.
 
 \end{eabstract}
