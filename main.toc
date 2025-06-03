@@ -16,7 +16,7 @@
 \contentsline {subsection}{\numberline {\raisebox {0.0mm}{2.3.1}}\hspace {-2pt}基于负样本的对比学习}{12}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {\raisebox {0.0mm}{2.3.2}}\hspace {-2pt}无负样本的对比学习}{12}{subsection.2.3.2}%
 \contentsline {section}{\numberline {\raisebox {0.0mm}{2.4}}\hspace {-2pt}数据集及评价指标}{12}{section.2.4}%
-\contentsline {subsection}{\numberline {\raisebox {0.0mm}{2.4.1}}\hspace {-2pt}数据集}{13}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {\raisebox {0.0mm}{2.4.1}}\hspace {-2pt}数据集}{12}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {\raisebox {0.0mm}{2.4.2}}\hspace {-2pt}评价指标}{15}{subsection.2.4.2}%
 \contentsline {section}{\numberline {\raisebox {0.0mm}{2.5}}\hspace {-2pt}病理图像的预处理过程}{15}{section.2.5}%
 \contentsline {section}{\numberline {\raisebox {0.0mm}{2.6}}\hspace {-2pt}本章小结}{16}{section.2.6}%

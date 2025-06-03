@@ -15,7 +15,7 @@
 
 在经典的MIL范式中，使用预训练模型将实例转化成离线特征，然后聚合成包级别的特征表示，以进行后续分析。
 在这个范式中，由于病理图像的高分辨率特性，导致其划分后的实例数目过多，因此WSI分类可以被视为一个长序列建模问题，通过将包中的大量实例视为标记来处理，能够建模实例与整个包之间的空间上下文相关性，以捕捉判别性信息。
-一些基于状态空间模型（State Space Model，SSM）的方法被设计来有效对长序列进行建模。
+一些基于状态空间模型的方法被设计来有效对长序列进行建模。
 Mamba是最近提出的一种具有代表性的基于SSM架构的模型，与ViT相比具有更好的长序列建模性能，但需要的计算资源更少~\cite{zhu2024vision}。
 然而，在Mamba模型和MIL任务之间存在一个根本的区别：如图\ref{figure1: Mamba模型与MIL任务差异}所示，Mamba作为扫描序列敏感模型，其性能高度依赖实例的输入顺序，这与多实例学习的序列不变性要求存在本质冲突，导致模型在病理图像分类任务中易受随机序列干扰而产生性能波动。
 
@@ -53,7 +53,7 @@ Mamba是最近提出的一种具有代表性的基于SSM架构的模型，与ViT
   \centering
   \captionsetup{font={small, stretch=1.312}}
   \includegraphics[width=1.0\columnwidth]{figures/SMCMIL.pdf}
-  \bicaption[SMC-MIL模型总览图]{SMC-MIL模型总览图。}[Overview of proposed SMC-MIL]{Overview of proposed SMC-MIL.}
+  \bicaption[SMC-MIL模型总览图]{SMC-MIL模型总览图}[Overview of proposed SMC-MIL]{Overview of proposed SMC-MIL}
   \label{figure3: SMCMIL}
 \end{figure}
 
@@ -229,7 +229,7 @@ Mamba是最近提出的一种具有代表性的基于SSM架构的模型，与ViT
     \label{figure3:推理流程2}
     }
   %\includegraphics[width=1.0\columnwidth]{figures/基于easy分支的推理阶段.pdf}
-  \bicaption[SMC-MIL模型推理流程示意图]{SMC-MIL模型推理流程示意图。}[Schematic diagram of SMC-MIL model inference process]{Schematic diagram of SMC-MIL model inference process.}
+  \bicaption[SMC-MIL模型推理流程示意图]{SMC-MIL模型推理流程示意图}[Schematic diagram of SMC-MIL model inference process]{Schematic diagram of SMC-MIL model inference process}
   \label{figure3: 推理流程}
 \end{figure}
 
@@ -323,7 +323,7 @@ R$^2$T-MIL~\cite{tang2024feature}和M$^2$S-MIL。
 %\setlength{\tabcolsep}{10pt}
 \captionsetup{font={small, stretch=1.512}}
 \begin{xltabular}{\textwidth}{XCCC}
-  \bilingualcaption{SMC-MIL在CAMELYON数据集的癌症诊断性能比较（\%）}{SMC-MIL在CAMELYON数据集的癌症诊断性能比较（\%）。最优结果用粗体表示，次优结果使用下划线表示。}{Comparison of cancer diagnostic performance of SMC-MIL on the CAMELYON dataset (\%). The optimal experimental results are marked in bold, and the sub-optimal are underlined.}
+  \bilingualcaption{SMC-MIL在CAMELYON数据集的癌症诊断性能比较（\%）}{SMC-MIL在CAMELYON数据集的癌症诊断性能比较（\%）（最优结果用粗体表示，次优结果使用下划线表示。）}{Comparison of cancer diagnostic performance of SMC-MIL on the CAMELYON dataset (\%) (The optimal experimental results are marked in bold, and the sub-optimal are underlined.)}
   \label{table4: CAMELYON} \\
   \toprule
   方法   & Accuracy          & AUC      & F1-score  \\ 
@@ -369,7 +369,7 @@ R$^2$T-MIL~\cite{tang2024feature}和M$^2$S-MIL。
 \setstretch{1.245}        % 设置具有指定弹力的橡皮长度（原行宽的1.2倍）
 \captionsetup{font={small, stretch=1.512}}
 \begin{xltabular}{\textwidth}{XCCC}
-  \bilingualcaption{SMC-MIL在TCGA-NSCLC数据集的亚型分类性能比较（\%）}{SMC-MIL在TCGA-NSCLC数据集的亚型分类性能比较（\%）。最优结果用粗体表示，次优结果使用下划线表示。}{Comparison of sub-typing performance of SMC-MIL on the TCGA-NSCLC dataset (\%). The optimal experimental results are marked in bold, and the sub-optimal are underlined.}
+  \bilingualcaption{SMC-MIL在TCGA-NSCLC数据集的亚型分类性能比较（\%）}{SMC-MIL在TCGA-NSCLC数据集的亚型分类性能比较（\%）（最优结果用粗体表示，次优结果使用下划线表示。）}{Comparison of sub-typing performance of SMC-MIL on the TCGA-NSCLC dataset (\%) (The optimal experimental results are marked in bold, and the sub-optimal are underlined.)}
   \label{table4: NSCLC} \\
   \toprule
   方法   & Accuracy          & AUC      & F1-score  \\ 
@@ -416,7 +416,7 @@ R$^2$T-MIL~\cite{tang2024feature}和M$^2$S-MIL。
 \setstretch{1.245}        % 设置具有指定弹力的橡皮长度（原行宽的1.2倍）
 \captionsetup{font={small, stretch=1.512}}
 \begin{xltabular}{\textwidth}{XCCC}
-  \bilingualcaption{SMC-MIL在TCGA-BRCA数据集的亚型分类性能比较（\%）}{SMC-MIL在TCGA-BRCA数据集的亚型分类性能比较（\%）。最优结果用粗体表示，次优结果使用下划线表示。}{Comparison of  sub-typing performance of SMC-MIL on the TCGA-BRCA dataset (\%). The optimal experimental results are marked in bold, and the sub-optimal are underlined.}
+  \bilingualcaption{SMC-MIL在TCGA-BRCA数据集的亚型分类性能比较（\%）}{SMC-MIL在TCGA-BRCA数据集的亚型分类性能比较（\%）（最优结果用粗体表示，次优结果使用下划线表示。）}{Comparison of  sub-typing performance of SMC-MIL on the TCGA-BRCA dataset (\%) (The optimal experimental results are marked in bold, and the sub-optimal are underlined.)}
   \label{table4: BRCA} \\
   \toprule
   方法   & Accuracy          & AUC      & F1-score  \\ 
@@ -465,7 +465,7 @@ R$^2$T-MIL~\cite{tang2024feature}和M$^2$S-MIL。
 %\setlength{\tabcolsep}{10pt}
 \captionsetup{font={small, stretch=1.512}}
 \begin{xltabular}{\textwidth}{XCCC}
-  \bilingualcaption{SMC-MIL在BRACS数据集官方划分下的粗粒度分类性能对比（\%）}{SMC-MIL在BRACS数据集官方划分下的粗粒度分类（三分类）性能对比（\%）。最优结果用粗体表示，次优结果使用下划线表示。}{Performance comparison of SMC-MIL coarse-grained classification (3-class) under the official classification of BRACS dataset (\%)). The optimal experimental results are marked in bold, and the sub-optimal are underlined.}
+  \bilingualcaption{SMC-MIL在BRACS数据集官方划分下的粗粒度分类性能对比（\%）}{SMC-MIL在BRACS数据集官方划分下的粗粒度分类（三分类）性能对比（\%）(最优结果用粗体表示，次优结果使用下划线表示。)}{Performance comparison of SMC-MIL coarse-grained classification (3-class) under the official classification of BRACS dataset (\%) (The optimal experimental results are marked in bold, and the sub-optimal are underlined.)}
   \label{table4: BRACS3} \\
   \toprule
   方法   & Accuracy          & AUC      & F1-score  \\ 
@@ -512,7 +512,7 @@ R$^2$T-MIL~\cite{tang2024feature}和M$^2$S-MIL。
 %\setlength{\tabcolsep}{10pt}
 \captionsetup{font={small, stretch=1.512}}
 \begin{xltabular}{\textwidth}{XCCC}
-  \bilingualcaption{SMC-MIL在BRACS数据集官方划分下的细粒度分类性能对比（\%）}{SMC-MIL在BRACS数据集官方划分下的细粒度分类（七分类）性能对比（\%）。最优结果用粗体表示，次优结果使用下划线表示。}{Performance comparison of SMC-MIL's fine-grained classification (7-class) under the official classification of BRACS dataset（\%). The optimal experimental results are marked in bold, and the sub-optimal are underlined.}
+  \bilingualcaption{SMC-MIL在BRACS数据集官方划分下的细粒度分类性能对比（\%）}{SMC-MIL在BRACS数据集官方划分下的细粒度分类（七分类）性能对比（\%）（最优结果用粗体表示，次优结果使用下划线表示。）}{Performance comparison of SMC-MIL's fine-grained classification (7-class) under the official classification of BRACS dataset（\%） (The optimal experimental results are marked in bold, and the sub-optimal are underlined.)}
   \label{table4: BRACS7} \\
   \toprule
   方法   & Accuracy          & AUC      & F1-score  \\ 
@@ -560,7 +560,7 @@ R$^2$T-MIL~\cite{tang2024feature}和M$^2$S-MIL。
 %\setlength{\tabcolsep}{10pt}
 \captionsetup{font={small, stretch=1.512}}
 \begin{xltabular}{\textwidth}{XCCC}
-  \bilingualcaption{SMC-MIL在BRACS数据集五折交叉验证下的细粒度分类性能对比（\%）}{SMC-MIL在BRACS数据集五折交叉验证下的细粒度分类性能对比（\%）。最优结果用粗体表示，次优结果使用下划线表示。}{Performance comparison of SMC-MIL for fine-grained classification (7-class) under five-fold cross validation on BRACS dataset(\%). The optimal experimental results are marked in bold, and the sub-optimal are underlined.}
+  \bilingualcaption{SMC-MIL在BRACS数据集五折交叉验证下的细粒度分类性能对比（\%）}{SMC-MIL在BRACS数据集五折交叉验证下的细粒度分类性能对比（\%）（最优结果用粗体表示，次优结果使用下划线表示。）}{Performance comparison of SMC-MIL for fine-grained classification (7-class) under five-fold cross validation on BRACS dataset(\%) (The optimal experimental results are marked in bold, and the sub-optimal are underlined.)}
   \label{table4: BRACS_7} \\
   \toprule
   方法   & Accuracy          & AUC      & F1-score  \\ 
@@ -647,9 +647,9 @@ Accuracy 较次优方法提升0.37\%，AUC 提升0.45\%，F1 - score 提升0.42\
 %\setlength{\tabcolsep}{10pt}
 \captionsetup{font={small, stretch=1.512}}
 \begin{xltabular}{\textwidth}{XCCC}
-  \bilingualcaption{SMC-MIL在R50提取特征的三个主要数据集上的生存预测结果（\%）}{SMC-MIL在R50提取特征的三个主要数据集上的生存预测结果（\%）。
-  \\最优结果用粗体表示，次优结果使用下划线表示。}{Survival Prediction results on three main datasets extracted by R50(\%). \\
-  The optimal experimental results are marked in bold, and the sub-optimal are underlined.}
+  \bilingualcaption{SMC-MIL在R50提取特征的三个主要数据集上的生存预测结果（\%）}{SMC-MIL在R50提取特征的三个主要数据集上的生存预测结果（\%）
+  \\（最优结果用粗体表示，次优结果使用下划线表示。）}{Survival Prediction results on three main datasets extracted by R50(\%) \\
+  (The optimal experimental results are marked in bold, and the sub-optimal are underlined.)}
   \label{table4: Survival_r50} \\
   \toprule
   方法         & BLCA & LUAD & LUSC  \\ 
@@ -693,9 +693,9 @@ Accuracy 较次优方法提升0.37\%，AUC 提升0.45\%，F1 - score 提升0.42\
 %\setlength{\tabcolsep}{10pt}
 \captionsetup{font={small, stretch=1.512}}
 \begin{xltabular}{\textwidth}{XCCC}
-  \bilingualcaption{SMC-MIL在UNI提取特征的三个主要数据集上的生存预测结果（\%）}{SMC-MIL在UNI提取特征的三个主要数据集上的生存预测结果（\%）。
-  \\最优结果用粗体表示，次优结果使用下划线表示。}{Survival Prediction results on three main datasets extracted by UNI(\%). \\
-  The optimal experimental results are marked in bold, and the sub-optimal are underlined.}
+  \bilingualcaption{SMC-MIL在UNI提取特征的三个主要数据集上的生存预测结果（\%）}{SMC-MIL在UNI提取特征的三个主要数据集上的生存预测结果（\%）
+  \\（最优结果用粗体表示，次优结果使用下划线表示。）}{Survival Prediction results on three main datasets extracted by UNI(\%) \\
+  (The optimal experimental results are marked in bold, and the sub-optimal are underlined.)}
   \label{table4: Survival_uni} \\
   \toprule
   方法         & BLCA & LUAD & LUSC  \\ 
@@ -756,7 +756,7 @@ Accuracy 较次优方法提升0.37\%，AUC 提升0.45\%，F1 - score 提升0.42\
   \captionsetup{font={small, stretch=1.512}}
   \centering
   % \vspace{-10pt}
-  \bicaption[在三个主要数据集上，不同组件对性能的影响]{在三个主要数据集上，不同组件对性能的影响。最优结果用粗体表示，次优结果用下划线表示。}{Module ablation experiments of SMC-MIL on CAMELYON, NSCLC and BRCA. The optimal experimental results are marked in bold, and the sub-optimal are underlined.}    % 中英文标题
+  \bicaption[在三个主要数据集上，不同组件对性能的影响]{在三个主要数据集上，不同组件对性能的影响 （最优结果用粗体表示，次优结果用下划线表示。）}{Module ablation experiments of SMC-MIL on CAMELYON, NSCLC and BRCA (The optimal experimental results are marked in bold, and the sub-optimal are underlined.)}    % 中英文标题
   \begin{tabularx}{\textwidth}{lCCC}
     \toprule
     方法 & CAMELYON& NSCLC&BRCA\\ \midrule
@@ -789,7 +789,7 @@ Aug.表示应用了序列对比学习，Samp.表示使用采样策略扩展“ha
   \captionsetup{font={small, stretch=1.512}}
   \centering
   % \vspace{-10pt}
-  \bicaption[不同Mamba变体的扫描不变性评估对比]{不同Mamba变体的扫描不变性评估对比。最优结果用粗体表示。}{Scan-invariant Evaluation of different Mamba variants. The optimal experimental results are marked in bold.}    % 中英文标题
+  \bicaption[不同Mamba变体的扫描不变性评估对比]{不同Mamba变体的扫描不变性评估对比（最优结果用粗体表示。）}{Scan-invariant Evaluation of different Mamba variants (The optimal experimental results are marked in bold.)}    % 中英文标题
   \begin{tabularx}{\textwidth}{lCCCC}
     \toprule
     变体 & CAMELYON& NSCLC&BRCA& BRACS-7$^\star$\\ \midrule
@@ -807,7 +807,7 @@ SRMamba  & 89.99$\pm$0.46& 94.73$\pm$0.62 &91.99$\pm$1.78& 77.27$\pm$0.31\\
   \centering
   \captionsetup{font={small, stretch=1.312}}
   \includegraphics[width=1.0\columnwidth]{figures/scan_invariant.png}
-  \bicaption[不同Mamba变体的扫描不变性评估的双样本t检验]{不同Mamba变体的扫描不变性评估的双样本t检验}[Two-sample t-test for scanning invariance evaluation of different Mamba variants]{Two-sample t-test for scanning invariance evaluation of different Mamba variants.}
+  \bicaption[不同Mamba变体的扫描不变性评估的双样本t检验]{不同Mamba变体的扫描不变性评估的双样本t检验}[Two-sample t-test for scanning invariance evaluation of different Mamba variants]{Two-sample t-test for scanning invariance evaluation of different Mamba variants}
   \label{figure4: scan-invariant}
   % \vspace{-4pt}
 \end{figure}
@@ -825,7 +825,7 @@ SRMamba  & 89.99$\pm$0.46& 94.73$\pm$0.62 &91.99$\pm$1.78& 77.27$\pm$0.31\\
   \centering
   \captionsetup{font={small, stretch=1.312}}
   \includegraphics[width=0.9\columnwidth]{figures/SMCMIL的不同Mamba比较.pdf}
-  \bicaption[不同Mamba模型性能比对柱状图]{不同Mamba模型性能比对柱状图。}[Bar chart of performance comparison of different Mamba models.]{Bar chart of performance comparison of different Mamba models.}
+  \bicaption[不同Mamba模型性能比对柱状图]{不同Mamba模型性能比对柱状图}[Bar chart of performance comparison of different Mamba models]{Bar chart of performance comparison of different Mamba models}
   \label{figure4: DifferentMamba}
   % \vspace{-4pt}
 \end{figure}
@@ -844,7 +844,7 @@ SRMamba  & 89.99$\pm$0.46& 94.73$\pm$0.62 &91.99$\pm$1.78& 77.27$\pm$0.31\\
   \captionsetup{font={small, stretch=1.512}}
   \centering
   % \vspace{-10pt}
-  \bicaption[不同的分支对比策略对模型性能的影响]{不同的分支对比策略对模型性能的影响。最优结果使用粗体表示，次优结果使用下划线表示。}{Effects of different branch contrast strategies on model performance. The best results are shown in bold.}    % 中英文标题
+  \bicaption[不同的分支对比策略对模型性能的影响]{不同的分支对比策略对模型性能的影响（最优结果使用粗体表示，次优结果使用下划线表示。）}{Effects of different branch contrast strategies on model performance (The best results are shown in bold.)}    % 中英文标题
   \begin{tabularx}{\textwidth}{lCCCC}
     \toprule
     方法 & CAMELYON& NSCLC& BRACS-3& BRACS-7\\ \midrule
@@ -871,7 +871,7 @@ SRMamba  & 89.99$\pm$0.46& 94.73$\pm$0.62 &91.99$\pm$1.78& 77.27$\pm$0.31\\
   \captionsetup{font={small, stretch=1.512}}
   \centering
   % \vspace{-10pt}
-  \bicaption[讨论不同扫描模式的组合对模型性能的影响]{讨论不同扫描模式的组合对模型性能的影响。最优结果用粗体表示。}{Effect of combinations of different scan patterns on model performance. The best results are shown in bold.}    % 中英文标题
+  \bicaption[讨论不同扫描模式的组合对模型性能的影响]{讨论不同扫描模式的组合对模型性能的影响（最优结果用粗体表示。）}{Effect of combinations of different scan patterns on model performance (The best results are shown in bold.)}    % 中英文标题
   \begin{tabularx}{\textwidth}{lCCCC}
     \toprule
     方法 & CAMELYON& NSCLC& BRCA& BRACS-7$^\star$\\ \midrule
@@ -897,7 +897,7 @@ SRMamba  & 89.99$\pm$0.46& 94.73$\pm$0.62 &91.99$\pm$1.78& 77.27$\pm$0.31\\
   \centering
   \captionsetup{font={small, stretch=1.312}}
   \includegraphics[width=0.8\columnwidth]{figures/MixRatio.pdf}
-  \bicaption[不同序列增强率\texorpdfstring{$\alpha\%$}{}下的模型性能折线图]{不同序列增强率\texorpdfstring{$\alpha\%$}{}下的模型性能折线图。}[Line plot of model performance for different sequence enhancement rates \texorpdfstring{$\alpha\%$}{}]{Line plot of model performance for different sequence enhancement rates \texorpdfstring{$\alpha\%$}{}.}
+  \bicaption[不同序列增强率\texorpdfstring{$\alpha\%$}{}下的模型性能折线图]{不同序列增强率\texorpdfstring{$\alpha\%$}{}下的模型性能折线图}[Line plot of model performance for different sequence enhancement rates \texorpdfstring{$\alpha\%$}{}]{Line plot of model performance for different sequence enhancement rates \texorpdfstring{$\alpha\%$}{}}
   \label{figure4: mixratio}
 \end{figure}
 
@@ -911,7 +911,7 @@ SRMamba  & 89.99$\pm$0.46& 94.73$\pm$0.62 &91.99$\pm$1.78& 77.27$\pm$0.31\\
   \centering
   \captionsetup{font={small, stretch=1.312}}
   \includegraphics[width=0.8\columnwidth]{figures/MaskRatio.pdf}
-  \bicaption[不同序列掩码率\texorpdfstring{$\beta\%$}{}下的模型性能折线图]{不同序列掩码率\texorpdfstring{$\beta\%$}{}下的模型性能折线图。}[Line plot of model performance for different sequence masking ratess \texorpdfstring{$\beta\%$}{}]{Line plot of model performance for different sequence masking ratess \texorpdfstring{$\beta\%$}{}.}
+  \bicaption[不同序列掩码率\texorpdfstring{$\beta\%$}{}下的模型性能折线图]{不同序列掩码率\texorpdfstring{$\beta\%$}{}下的模型性能折线图}[Line plot of model performance for different sequence masking ratess \texorpdfstring{$\beta\%$}{}]{Line plot of model performance for different sequence masking ratess \texorpdfstring{$\beta\%$}{}}
   \label{figure4: maskratio}
 \end{figure}
 
@@ -924,7 +924,7 @@ SRMamba  & 89.99$\pm$0.46& 94.73$\pm$0.62 &91.99$\pm$1.78& 77.27$\pm$0.31\\
   \centering
   \captionsetup{font={small, stretch=1.312}}
   \includegraphics[width=0.8\columnwidth]{figures/t-testwithSOTA.png}
-  \bicaption[与SOTA方法性能比较的Bootstrap检验]{与SOTA方法性能比较的Bootstrap检验。}[Bootstrap test for performance comparison with SOTA method]{Bootstrap test for performance comparison with SOTA method.}
+  \bicaption[与SOTA方法性能比较的Bootstrap检验]{与SOTA方法性能比较的Bootstrap检验}[Bootstrap test for performance comparison with SOTA method]{Bootstrap test for performance comparison with SOTA method}
   \label{figure4: sota t-test}
 \end{figure}
 本小节对本章方法和SOTA方法进行了有放回的随机抽样Bootstrap检验，共采样100次，得到的结果如图\ref{figure4: sota t-test}所示。可以看出，本章的方法显著高于SOTA，因为p值远小于0.05。
@@ -937,7 +937,7 @@ SRMamba  & 89.99$\pm$0.46& 94.73$\pm$0.62 &91.99$\pm$1.78& 77.27$\pm$0.31\\
   \captionsetup{font={small, stretch=1.512}}
   \centering
   % \vspace{-10pt}
-  \bicaption[不同推理方式的性能对比]{不同的推理方式的性能对比。最优结果用粗体表示。}{Performance comparison of different inference modes. The best results are shown in bold.}    % 中英文标题
+  \bicaption[不同推理方式的性能对比]{不同的推理方式的性能对比（最优结果用粗体表示。）}{Performance comparison of different inference modes (The best results are shown in bold.)}    % 中英文标题
   \begin{tabularx}{\textwidth}{lCCCC}
     \toprule
     方法 & CAMELYON& NSCLC& BRACS-3& BRACS-7\\ \midrule
@@ -958,7 +958,7 @@ SRMamba  & 89.99$\pm$0.46& 94.73$\pm$0.62 &91.99$\pm$1.78& 77.27$\pm$0.31\\
   \captionsetup{font={small, stretch=1.512}}
   \centering
   % \vspace{-10pt}
-  \bicaption[SMC-MIL以PLIP为离线特征提取器的癌症诊断性能]{SMC-MIL以PLIP为离线特征提取器的癌症诊断性能。最优结果用粗体表示，次优结果用下划线表示。}{Cancer diagnosis performance of SMC-MIL with PLIP as the offline feature extractors. The optimal experimental results are marked in bold, and the sub-optimal are underlined.}    % 中英文标题
+  \bicaption[SMC-MIL以PLIP为离线特征提取器的癌症诊断性能]{SMC-MIL以PLIP为离线特征提取器的癌症诊断性能（最优结果用粗体表示，次优结果用下划线表示。）}{Cancer diagnosis performance of SMC-MIL with PLIP as the offline feature extractors (The optimal experimental results are marked in bold, and the sub-optimal are underlined.)}    % 中英文标题
   \begin{tabularx}{\textwidth}{clCCC}
     \toprule
     &方法  & Accuracy& AUC&F1-score\\ \midrule
@@ -980,7 +980,7 @@ SRMamba  & 89.99$\pm$0.46& 94.73$\pm$0.62 &91.99$\pm$1.78& 77.27$\pm$0.31\\
   \captionsetup{font={small, stretch=1.512}}
   \centering
   % \vspace{-10pt}
-  \bicaption[SMC-MIL以PLIP为离线特征提取器在TCGA-NSCLC上的亚型分型性能]{SMC-MIL以PLIP为离线特征提取器在TCGA-NSCLC上的的亚型分型性能。最优结果用粗体表示，次优结果用下划线表示。}{Cancer sub-typing performance of SMC-MIL on the TCGA-NSCLC dataset with PLIP as the feature extractors. The optimal experimental results are marked in bold, and the sub-optimal experimental results are underlined.}    % 中英文标题
+  \bicaption[SMC-MIL以PLIP为离线特征提取器在TCGA-NSCLC上的亚型分型性能]{SMC-MIL以PLIP为离线特征提取器在TCGA-NSCLC上的的亚型分型性能（最优结果用粗体表示，次优结果用下划线表示。）}{Cancer sub-typing performance of SMC-MIL on the TCGA-NSCLC dataset with PLIP as the feature extractors (The optimal experimental results are marked in bold, and the sub-optimal experimental results are underlined.)}    % 中英文标题
   \begin{tabularx}{\textwidth}{clCCC}
     \toprule
     &方法  & Accuracy& AUC&F1-score\\ \midrule
@@ -1005,7 +1005,7 @@ SRMamba  & 89.99$\pm$0.46& 94.73$\pm$0.62 &91.99$\pm$1.78& 77.27$\pm$0.31\\
   \captionsetup{font={small, stretch=1.512}}
   \centering
   % \vspace{-10pt}
-  \bicaption[SMC-MIL以PLIP为离线特征提取器在TCGA-BRCA上的亚型分型性能]{SMC-MIL以PLIP为离线特征提取器在TCGA-BRCA上的亚型分型性能。最优结果用粗体表示，次优结果用下划线表示。}{Cancer sub-typing performance of SMC-MIL on the TCGA-BRCA dataset with PLIP as the feature extractors. The optimal experimental results are marked in bold, and the sub-optimal experimental results are underlined.}    % 中英文标题
+  \bicaption[SMC-MIL以PLIP为离线特征提取器在TCGA-BRCA上的亚型分型性能]{SMC-MIL以PLIP为离线特征提取器在TCGA-BRCA上的亚型分型性能（最优结果用粗体表示，次优结果用下划线表示。）}{Cancer sub-typing performance of SMC-MIL on the TCGA-BRCA dataset with PLIP as the feature extractors (The optimal experimental results are marked in bold, and the sub-optimal experimental results are underlined.)}    % 中英文标题
   \begin{tabularx}{\textwidth}{clCCC}
     \toprule
     &方法  & Accuracy& AUC&F1-score\\ \midrule
@@ -1034,7 +1034,7 @@ SRMamba  & 89.99$\pm$0.46& 94.73$\pm$0.62 &91.99$\pm$1.78& 77.27$\pm$0.31\\
   \centering
   \captionsetup{font={small, stretch=1.312}}
   \includegraphics[width=0.8\columnwidth]{figures/Visualize_cropped.pdf}
-  \bicaption[原始Mamba(baseline)和SMC-MIL关注的图块可视化结果]{原始Mamba(baseline)和SMC-MIL制作的图块可视化结果}[Visualization results of patches focused by original Mamba(baseline) and SMC-MIL]{Visualization results of patches focused by original Mamba(baseline) and SMC-MIL.}
+  \bicaption[原始Mamba(baseline)和SMC-MIL关注的图块可视化结果]{原始Mamba(baseline)和SMC-MIL制作的图块可视化结果}[Visualization results of patches focused by original Mamba(baseline) and SMC-MIL]{Visualization results of patches focused by original Mamba(baseline) and SMC-MIL}
   \label{figure4: visualize}
 \end{figure}
 
@@ -1042,7 +1042,7 @@ SRMamba  & 89.99$\pm$0.46& 94.73$\pm$0.62 &91.99$\pm$1.78& 77.27$\pm$0.31\\
   \centering
   \captionsetup{font={small, stretch=1.312}}
   \includegraphics[width=0.8\columnwidth]{figures/t-SNE.png}
-  \bicaption[原始Mamba(baseline)和SMC-MIL聚合特征t-SNE可视化结果]{原始Mamba(baseline)和SMC-MIL聚合特征t-SNE可视化结果}[The t-SNE visualization of aggregated features from original Mamba(baseline) and SMC-MIL]{The t-SNE visualization of aggregated features from Mamba(baseline) and SMC-MIL.}
+  \bicaption[原始Mamba(baseline)和SMC-MIL聚合特征t-SNE可视化结果]{原始Mamba(baseline)和SMC-MIL聚合特征t-SNE可视化结果}[The t-SNE visualization of aggregated features from original Mamba(baseline) and SMC-MIL]{The t-SNE visualization of aggregated features from Mamba(baseline) and SMC-MIL}
   \label{figure4: tSNE}
 \end{figure}
 
@@ -1061,7 +1061,7 @@ SRMamba  & 89.99$\pm$0.46& 94.73$\pm$0.62 &91.99$\pm$1.78& 77.27$\pm$0.31\\
   \captionsetup{font={small, stretch=1.512}}
   \centering
   \vspace{-10pt}
-  \bicaption[不同架构的性能与效率对比]{不同架构的性能与效率对比。}{Performance and efficiency comparison of different architectures.}    % 中英文标题
+  \bicaption[不同架构的性能与效率对比]{不同架构的性能与效率对比}{Performance and efficiency comparison of different architectures}    % 中英文标题
   \begin{tabularx}{\textwidth}{clCCC}
     \toprule
     &方法  & AUC（\%）& 训练时间（H） & 显存（G）\\ \midrule

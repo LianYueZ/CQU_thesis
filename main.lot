@@ -3,11 +3,11 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \vspace {-10pt}
-\contentsline {table}{\numberline {2.1}{\ignorespaces 癌症诊断、分型病理图像数据集详情}}{13}{table.caption.11}%
-\contentsline {table}{\numberline {2.2}{\ignorespaces 生存预测病理图像数据集详情}}{13}{table.caption.12}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces 癌症诊断、分型病理图像数据集详情表}}{13}{table.caption.11}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces 生存预测病理图像数据集详情表}}{13}{table.caption.12}%
 \addvspace {10\p@ }
 \vspace {-10pt}
-\contentsline {table}{\numberline {3.1}{\ignorespaces 基于空间信息增强的多扫描Mamba模型的实验环境及配置}}{24}{table.caption.16}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces 基于空间信息增强的多扫描Mamba模型的实验环境及配置表}}{24}{table.caption.16}%
 \contentsline {table}{\numberline {3.2}{\ignorespaces M$^2$S-MIL在CAMELYON数据集的癌症诊断性能比较（\%）}}{25}{table.3.2}%
 \contentsline {table}{\numberline {3.3}{\ignorespaces M$^2$S-MIL在TCGA-NSCLC数据集的亚型分类性能比较（\%）}}{26}{table.3.3}%
 \contentsline {table}{\numberline {3.4}{\ignorespaces M$^2$S-MIL在TCGA-BRCA数据集的亚型分类性能比较（\%）}}{26}{table.3.4}%

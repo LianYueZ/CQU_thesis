@@ -11,11 +11,11 @@
 \section[\hspace{-2pt}数字病理图像多实例学习]{{\heiti\zihao{-3} \hspace{-8pt}数字病理图像多实例学习}}\label{section2: 数字病理图像多实例学习}
 
 数字病理图像分类属于前沿且极具潜力的交叉研究领域，它将病理学、图像分析和计算机科学等多学科知识进行深度整合。
-此领域借助先进算法、机器学习模型和人工智能技术，以实现对全切片图像（Whole Slide Image，简称 WSI 或病理图像）的全面、精确分析解读，这也是它的核心目标。 
+此领域借助先进算法、机器学习模型和人工智能技术，以实现对WSI图像的全面、精确分析解读，这也是它的核心目标。 
 病理图像分类任务通常可分为癌症诊断、亚型分类、生存预测等任务，分别从这些任务角度中辅助病理学家诊断疾病。
 数字病理领域，超高分辨率全切片图像（WSI）要完成像素级标注，需投入大量时间与人力。这一难题致使基于像素级标签开展的传统深度学习病理图像分类，难以施展。在此背景下，凭借独特优势，基于多实例学习范式的数字病理图像分类，逐渐成为该领域的常用方法。
 
-多实例学习（Multiple Instance Learning, MIL）~\cite{dietterich1997solving}是弱监督学习的重要分支，其核心思想是处理数据标注在“包”（Bag）级别而非单个实例级别的场景。具体而言，每个数据包包含多个实例，但仅包级别标签已知。经典假设为：若一个包中至少存在一个正实例（Positive Instance），则该包被标记为正类；若所有实例均为负类，则包标记为负类。此范式由Dietterich等人在1997年药物分子活性预测研究中首次提出，并逐渐拓展至计算机视觉、自然语言处理及生物医学等领域。
+多实例学习~\cite{dietterich1997solving}是弱监督学习的重要分支，其核心思想是处理数据标注在“包”（Bag）级别而非单个实例级别的场景。具体而言，每个数据包包含多个实例，但仅包级别标签已知。经典假设为：若一个包中至少存在一个正实例（Positive Instance），则该包被标记为正类；若所有实例均为负类，则包标记为负类。此范式由Dietterich等人在1997年药物分子活性预测研究中首次提出，并逐渐拓展至计算机视觉、自然语言处理及生物医学等领域。
 
 具体来说，对于在病理图像分类任务而言，一张WSI图像$\mathnormal{X}$将作为一个包，将之切分为多个小图块，将每个图块Patch作为一个实例$x_i$，进而得到实例集合$\mathnormal{X} =\{x_i\}^N_{i=1}$。
 需注意，不同包所包含的实例数目$N$并不固定。在任何分类任务里，包$\mathnormal{X}$都附带已知的标签信息$\mathnormal{Y}\in \{0,1\}$，而实例标签$y_i$的具体取值$\{0,1\}$处于未知状态。
@@ -41,7 +41,7 @@ Shao等人~\cite{shao2021transmil}将Transformer架构引入多实例学习框�
 
 \section[\hspace{-2pt}Mamba架构]{{\heiti\zihao{-3} \hspace{-8pt}Mamba架构}}\label{section2: Mamba架构}
 
-如图\ref{figure1: Mamba架构示意图}，Mamba架构是由Albert Gu和Tri Dao等人于2023年提出的新型序列建模框架~\cite{gu2023mamba}，其核心创新在于将状态空间模型（State Space Model, SSM）与选择性机制（Selective Mechanism）相结合，
+如图\ref{figure1: Mamba架构示意图}，Mamba架构是由Albert Gu和Tri Dao等人于2023年提出的新型序列建模框架~\cite{gu2023mamba}，其核心创新在于将状态空间模型（SSM）与选择性机制（Selective Mechanism）相结合，
 突破了传统Transformer模型在长序列建模中的局限性。该架构通过建立线性时间复杂度与序列长度的关系，显著提升了模型处理长序列依赖的能力，在自然语言处理、基因组学分析、计算机视觉等领域展现出显著优势。
 
 从数学基础来看，Mamba架构以连续时间状态空间模型为理论框架。其核心微分方程可表述为:
@@ -67,7 +67,7 @@ Shao等人~\cite{shao2021transmil}将Transformer架构引入多实例学习框�
     \centering
     \captionsetup{font={small, stretch=1.312}}
     \includegraphics[width=1.0\columnwidth]{figures/RelatedWork/Mamba架构.png}
-    \bicaption[Mamba架构示意图]{Mamba架构示意图。~\cite{gu2023mamba}}[Illustration of the Mamba architecture]{ Illustration of the Mamba architecture.~\cite{gu2023mamba}}
+    \bicaption[Mamba架构示意图]{Mamba架构示意图~\cite{gu2023mamba}}[Illustration of the Mamba architecture]{ Illustration of the Mamba architecture~\cite{gu2023mamba}}
     \label{figure1: Mamba架构示意图}
 \end{figure}
 在架构设计层面，Mamba通过三个关键创新实现突破：首先，提出选择性扫描算法（Selective Scan Algorithm），通过时间步长参数$\Delta$的动态调节，实现高频信号密集采样与低频信号稀疏处理的智能平衡；其次，开发硬件感知并行化技术，利用GPU内存层级特性优化扫描操作的计算模式，在保持线性时间复杂度的同时实现并行加速；最后，采用模块化堆叠结构，通过交替堆叠SSM块与门控前馈网络构建深度模型，配合残差连接和层归一化技术确保梯度有效传播。实验数据显示，在PG19长文本建模任务中，该架构的困惑度相比Transformer降低23\%，训练速度提升5.2倍~\cite{gu2023mamba}。
@@ -96,7 +96,7 @@ Shao等人~\cite{shao2021transmil}将Transformer架构引入多实例学习框�
     \centering
     \captionsetup{font={small, stretch=1.312}}
     \includegraphics[width=1.0\columnwidth]{figures/RelatedWork/对比学习结构.png}
-    \bicaption[对比学习结构示意图]{对比学习结构示意图。}[ Contrastive Learning structure diagram]{ Contrastive Learning structure diagram.}
+    \bicaption[对比学习结构示意图]{对比学习结构示意图}[ Contrastive Learning structure diagram]{ Contrastive Learning structure diagram}
     \label{figure1: 对比学习结构示意图}
 \end{figure}
 
@@ -125,7 +125,7 @@ Shao等人~\cite{shao2021transmil}将Transformer架构引入多实例学习框�
 \small    % 设置表格字体为5号
 \setstretch{1.245}        % 设置具有指定弹力的橡皮长度（原行宽的1.2倍）
 \captionsetup{font={small, stretch=1.512}}
-\centering\bicaption[癌症诊断、分型病理图像数据集详情]{癌症诊断、分型病理图像数据集详情。\# 代表具体数目}[Cancer diagnosis, classification WSI dataset details]{Cancer diagnosis, classification WSI dataset details. \# denotes the number of it.}    % 中英文标题
+\centering\bicaption[癌症诊断、分型病理图像数据集详情表]{癌症诊断、分型病理图像数据集详情表。\# 代表具体数目}[Table of Cancer diagnosis, classification WSI dataset details]{Table of ccancer diagnosis, classification WSI dataset details. \# denotes the number of it.}    % 中英文标题
 \begin{tabularx}{\textwidth}{lC@{}C @{\hspace{2pt}}C@{\hspace{2pt}}C@{\hspace{2pt}}C}
 \toprule
 数据集 & \# 病例 & \#WSI & \# 平均图块 & \# 最大图块 & \#最小图块 \\
@@ -147,7 +147,7 @@ BRACS     & 189  & 547 & 8429 &  22020 & 106 \\
     \small    % 设置表格字体为5号
     \setstretch{1.245}        % 设置具有指定弹力的橡皮长度（原行宽的1.2倍）
     \captionsetup{font={small, stretch=1.512}}
-    \centering\bicaption[生存预测病理图像数据集详情]{生存预测病理图像数据集详情。\# 代表具体数目}[Survival prediction Pathology image dataset details]{Survival prediction Pathology image dataset details. \# denotes the number of it.}    % 中英文标题
+    \centering\bicaption[生存预测病理图像数据集详情表]{生存预测病理图像数据集详情表。\# 代表具体数目}[Table of Survival prediction Pathology image dataset details]{Table of survival prediction pathology image dataset details. \# denotes the number of it.}    % 中英文标题
     \begin{tabularx}{\textwidth}{lC@{}C @{\hspace{2pt}}C@{\hspace{2pt}}C@{\hspace{2pt}}C}
     \toprule
     数据集 & {\# 病例} & \# WSI & \# 平均图块 & \# 最大图块 & \#最小图块 \\
@@ -170,7 +170,7 @@ BRACS     & 189  & 547 & 8429 &  22020 & 106 \\
 \textbf{\textcircled{1}癌症诊断数据集}
 
 \textbf{CAMELYON-16}~\cite{bejnordi2017diagnostic}与\textbf{CAMELYON-17}~\cite{bandi2018detection}作为当前开放获取规模最大的乳腺癌淋巴结转移病理诊断基准数据集，均提供病灶转移状态的二元分类标注（转移/非转移）。
-其中，CAMELYON-16数据集的训练集包含由荷兰拉德堡德大学医学中心及乌德勒支大学医学中心联合提供的270张全切片数字病理图像（Whole Slide Image, WSI），并配备独立划分的129张官方测试样本。
+其中，CAMELYON-16数据集的训练集包含由荷兰拉德堡德大学医学中心及乌德勒支大学医学中心联合提供的270张全切片数字病理图像，并配备独立划分的129张官方测试样本。
 CAMELYON-17数据集则进一步整合荷兰五所医疗机构的病理资源，共收录1000张经过专业标注的WSI影像。
 考虑到CAMELYON-17官方测试集500张样本的标注信息尚未开放，本研究仅采用其已公开的500张训练样本（对应100个临床病例及其影像学诊断结论）。
 尽管不少研究，如文献~\cite{li2021dual,shao2021transmil,tang2023multiple,tang2024feature}，采用CAMELYON-16~\cite{bejnordi2017diagnostic}数据集，对不同模型在癌症诊断任务中的性能展开评估。
@@ -237,7 +237,7 @@ AUC 对类别分布不均衡具有较强鲁棒性，且对分类决策阈值变�
     \centering
     \captionsetup{font={small, stretch=1.312}}
     \includegraphics[width=1.0\columnwidth]{figures/RelatedWork/CLAM1.jpg}
-    \bicaption[数字病理图像的预处理过程示意图]{数字病理图像的预处理过程示意图。~\cite{lu2021data}}[ Illustration of the WSI preprocessing process]{ Illustration of the WSI preprocessing process.~\cite{lu2021data}}
+    \bicaption[数字病理图像的预处理过程示意图]{数字病理图像的预处理过程示意图~\cite{lu2021data}}[ Illustration of the WSI preprocessing process]{ Illustration of the WSI preprocessing process~\cite{lu2021data}}
     \label{figure1: 数字病理图像的预处理过程示意图}
 \end{figure}
 \section[\hspace{-2pt}本章小结]{{\heiti\zihao{-3} \hspace{-8pt}本章小结}}\label{section2: 本章小结}
