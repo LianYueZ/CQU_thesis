@@ -1,7 +1,7 @@
 \contentsline {chapter}{摘\hskip \ccwd {}\hskip \ccwd {}要}{I}{chapter*.1}%
 \contentsline {chapter}{Abstract}{II}{chapter*.2}%
-\contentsline {chapter}{图目录}{VI}{section*.3}%
-\contentsline {chapter}{表目录}{VII}{section*.4}%
+\contentsline {chapter}{图目录}{VII}{section*.3}%
+\contentsline {chapter}{表目录}{VIII}{section*.4}%
 \contentsline {chapter}{\numberline {\raisebox {0.0mm}{1}}\hspace {0pt}绪\hskip \ccwd {}论}{1}{chapter.1}%
 \contentsline {section}{\numberline {\raisebox {0.0mm}{1.1}}\hspace {-2pt}研究背景及意义}{1}{section.1.1}%
 \contentsline {section}{\numberline {\raisebox {0.0mm}{1.2}}\hspace {-2pt}国内外研究现状与挑战}{3}{section.1.2}%
@@ -57,8 +57,9 @@
 \contentsline {section}{\numberline {\raisebox {0.0mm}{5.2}}\hspace {-2pt}未来展望}{59}{section.5.2}%
 \contentsline {chapter}{参考文献}{61}{section*.46}%
 \contentsline {chapter}{附\hskip \ccwd {}\hskip \ccwd {}录}{66}{appendix*.48}%
-\contentsline {section}{\numberline {A.}\hspace {-2pt}作者在攻读硕士学位期间的论文和专利目录}{66}{section.Alph0.1}%
-\contentsline {section}{\numberline {B.}\hspace {-2pt}作者在攻读硕士学位期间参与的科研项目}{66}{section.Alph0.2}%
-\contentsline {section}{\numberline {C.}\hspace {-2pt}学位论文数据集}{67}{section.Alph0.3}%
+\contentsline {section}{\numberline {A.}\hspace {-2pt}作者在攻读硕士学位期间的论文目录}{66}{section.Alph0.1}%
+\contentsline {section}{\numberline {B.}\hspace {-2pt}作者在攻读硕士学位期间的专利目录}{66}{section.Alph0.2}%
+\contentsline {section}{\numberline {C.}\hspace {-2pt}作者在攻读硕士学位期间参与的科研项目}{66}{section.Alph0.3}%
+\contentsline {section}{\numberline {D.}\hspace {-2pt}学位论文数据集}{67}{section.Alph0.4}%
 \contentsline {chapter}{致\hskip \ccwd {}\hskip \ccwd {}谢}{68}{appendix*.50}%
 \contentsfinish 
